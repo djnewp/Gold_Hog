@@ -40,7 +40,6 @@ public class mainchar : character
         _hp = Math.Max(0, _hp);
         //_hpVal.text = _hp.ToString();
         //_uiM.OnDmg(_hp);
-        _anim.SetBool("onHit", true);
         _anim.SetInteger("hp", _hp);
     }
 
