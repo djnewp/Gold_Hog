@@ -58,7 +58,7 @@ public class mainchar : character
 
     public void Jump()
     {
-        if (jump < 3)
+        //if (jump < 3)
         {
             jump++;
             _anim.SetBool("keyJump", true);
@@ -68,7 +68,7 @@ public class mainchar : character
             float limit = Mathf.Min(_jumpMax, vel.y);
             _rigid.velocity = new Vector2(vel.x, limit);
         }
-        else return;
+       // else return;
     }
 
     public void Reborn()

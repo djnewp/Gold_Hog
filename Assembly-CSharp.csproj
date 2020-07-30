@@ -94,6 +94,7 @@
     <Compile Include="Assets\scripts\actor\character.cs" />
     <Compile Include="Assets\scripts\actor\item.cs" />
     <Compile Include="Assets\scripts\actor\mainchar.cs" />
+    <Compile Include="Assets\scripts\actor\obstacle.cs" />
     <Compile Include="Assets\scripts\actor\rundebilrun.cs" />
     <Compile Include="Assets\scripts\mycamerafollow.cs" />
     <Compile Include="Assets\scripts\scene\gamescene.cs" />

@@ -1,0 +1,8 @@
+Library
+Library/AnnotationManager
+Temp
+.vs
+obj
+Logs
+*.sln
+*.csproj
