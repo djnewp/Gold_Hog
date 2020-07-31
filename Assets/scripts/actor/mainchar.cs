@@ -17,6 +17,8 @@ public class mainchar : character
     public GameObject _guy;
     int jump = 0;
 
+    public AudioSource _jumpSnd;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +68,8 @@ public class mainchar : character
             Vector3 vel = _rigid.velocity;
             float limit = Mathf.Min(_jumpMax, vel.y);
             _rigid.velocity = new Vector2(vel.x, limit);
+            if (_jumpSnd) _jumpSnd.Play();
+
         }
        // else return;
     }

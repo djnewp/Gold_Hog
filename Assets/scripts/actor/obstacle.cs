@@ -5,16 +5,39 @@ using UnityEngine;
 public class obstacle : MonoBehaviour
 {
     public int dmg = 10;
+    GameObject _guy;
+    float pos;
+    float dist = 0;
+
+    private void Start()
+    {
+        GameObject pl = GameObject.Find("guy");
+        _guy = pl;
+        pos = gameObject.transform.position.x;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.name == "guy") Destroy(gameObject);
-        gameObject.SetActive(false);
+        if (collision.collider.name == "guy")
+        {
+            Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
     }
 
     public int DmgDeal()
     {
         return dmg;
+    }
+
+    private void Update()
+    {
+        dist = _guy.transform.position.x;
+        if(dist - pos > 10.0f)
+        {
+            Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
     }
 
 }

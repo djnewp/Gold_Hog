@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1663971431617656402}
   - component: {fileID: 5223266048149006461}
+  - component: {fileID: 4979053888592697251}
+  - component: {fileID: -1548661970896738165}
   m_Layer: 0
   m_Name: obstacleDrop
   m_TagString: obstacle
@@ -65,6 +67,40 @@ PolygonCollider2D:
       - {x: 0.045732975, y: -0.13097668}
       - {x: 0.05106902, y: -0.13051105}
       - {x: 0.083595514, y: -0.0692122}
+--- !u!114 &4979053888592697251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2847337272289665368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8240390bb79713246acbf0301d897c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 10
+--- !u!50 &-1548661970896738165
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2847337272289665368}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8376015449057341983
 GameObject:
   m_ObjectHideFlags: 0
