@@ -31,9 +31,7 @@ public class mainchar : character
         }*/
 
         _hp = _maxhp;
-        //_uiM.initHp(_hp);
-
-        //_anim.SetInteger("hp", _hp);
+        _anim.SetInteger("hp", _hp);
         _my2dcon = FindObjectOfType<My2DUserControl>();
     }
 
@@ -41,14 +39,8 @@ public class mainchar : character
     {
         _hp -= dmg;
         _hp = Math.Max(0, _hp);
-        //_hpVal.text = _hp.ToString();
-        //_uiM.OnDmg(_hp);
         _anim.SetInteger("hp", _hp);
 
-        if(_hp <= 0)
-        {
-            _GameMana.GameOver();
-        }
     }
 
     public void OnHeal(int heal)

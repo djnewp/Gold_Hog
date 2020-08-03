@@ -76,6 +76,7 @@
     <Compile Include="Assets\scripts\GP.cs" />
     <Compile Include="Assets\scripts\GameManage.cs" />
     <Compile Include="Assets\scripts\GameMng.cs" />
+    <Compile Include="Assets\scripts\HPGauge.cs" />
     <Compile Include="Assets\scripts\My2DUserControl.cs" />
     <Compile Include="Assets\scripts\OneByOne.cs" />
     <Compile Include="Assets\scripts\SP.cs" />

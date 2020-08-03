@@ -21,8 +21,6 @@ public class obstacleDrop : obstacle
         {
             _rigbd.bodyType = RigidbodyType2D.Dynamic;
 
-            //_rigbd.simulated = true;
-            //_rigbd.simulated = true;
         }
     }
 }

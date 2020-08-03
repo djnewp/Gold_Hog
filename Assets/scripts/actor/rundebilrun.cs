@@ -12,15 +12,20 @@ public class rundebilrun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _rigbd.AddForce(new Vector2(_runspd, 0));
-        Vector2 vel = _rigbd.velocity;
-        float newVelX = Mathf.Min(_runspd, vel.x);
-        newVelX = Mathf.Max(-1 * _maxspd, newVelX);
-        _rigbd.velocity = new Vector2(newVelX, vel.y);
+        if (_mychar._hp <= 0) return;
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        else
         {
-            _mychar.Jump();
+            _rigbd.AddForce(new Vector2(_runspd, 0));
+            Vector2 vel = _rigbd.velocity;
+            float newVelX = Mathf.Min(_runspd, vel.x);
+            newVelX = Mathf.Max(-1 * _maxspd, newVelX);
+            _rigbd.velocity = new Vector2(newVelX, vel.y);
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _mychar.Jump();
+            }
         }
     }
 }

@@ -40,7 +40,7 @@ public class UIMng : MonoBehaviour
 
     public void HideAll()
     {
-        GameObject ui = null;
+        GameObject ui;
 
         for (int 회 = 0; 회 < _uiList.Length; 회++)
         {
@@ -121,7 +121,7 @@ public class UIMng : MonoBehaviour
     {
         HideAll();
 
-        GameObject ui = null;
+        GameObject ui;
 
         for (int 회 = 0; 회 < _uiList.Length; 회++)
         {
