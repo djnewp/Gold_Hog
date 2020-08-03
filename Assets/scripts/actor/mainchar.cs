@@ -12,10 +12,11 @@ public class mainchar : character
     public float _jumpForce = 500.0f;
     public float _jumpMax = 350.0f;
     public UIMng _uiM;
-    public GameMng _gamem;
+    public GameManage _GameMana;
     public My2DUserControl _my2dcon;
     public GameObject _guy;
-    int jump = 0;
+    //int jump = 0;
+
 
     public AudioSource _jumpSnd;
 
@@ -43,6 +44,11 @@ public class mainchar : character
         //_hpVal.text = _hp.ToString();
         //_uiM.OnDmg(_hp);
         _anim.SetInteger("hp", _hp);
+
+        if(_hp <= 0)
+        {
+            _GameMana.GameOver();
+        }
     }
 
     public void OnHeal(int heal)
@@ -61,7 +67,7 @@ public class mainchar : character
     {
         //if (jump < 3)
         {
-            jump++;
+            //jump++;
             _anim.SetBool("keyJump", true);
             _rigid.AddForce(new Vector2(0.0f, _jumpForce));
 
@@ -84,7 +90,7 @@ public class mainchar : character
         if (collision.gameObject.tag == "ground")
         {
             _anim.SetBool("keyJump", false);
-            jump = 0;
+            //jump = 0;
         }
 
 
