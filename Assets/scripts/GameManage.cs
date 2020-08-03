@@ -8,6 +8,7 @@ public class GameManage : MonoBehaviour
     GameObject _char;
     UIManage _uiManage;
     mainchar _mychar;
+    public GameObject _start;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,12 @@ public class GameManage : MonoBehaviour
     {
         if (_mychar._hp <= 0 || _mychar.transform.position.y <= -6) GameOver();
 
+    }
+
+    public void Respawn()
+    {
+        Vector3 SP = new Vector3(_start.transform.position.x, _start.transform.position.y, _start.transform.position.z);
+        _mychar.transform.position = SP;
     }
 
     public void GameOver()
