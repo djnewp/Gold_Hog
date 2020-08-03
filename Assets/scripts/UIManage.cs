@@ -53,10 +53,10 @@ public class UIManage : MonoBehaviour
     }
 
     public void Restart()
-    {
-        SceneManager.GetSceneByName("hog_main");
-        _gamem.Respawn();
-        
+    {        
+        SceneManager.LoadScene("hog_main");
+        HideAll();
+        Show("HPGauge", true);
     }
     // Update is called once per frame
     void Update()
