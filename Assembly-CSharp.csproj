@@ -89,6 +89,7 @@
     <Compile Include="Assets\scripts\UI\ui_play.cs" />
     <Compile Include="Assets\scripts\UI\ui_plhpbar.cs" />
     <Compile Include="Assets\scripts\UI\ui_start.cs" />
+    <Compile Include="Assets\scripts\UIManage.cs" />
     <Compile Include="Assets\scripts\UIMng.cs" />
     <Compile Include="Assets\scripts\actor\NPC.cs" />
     <Compile Include="Assets\scripts\actor\Tileanim.cs" />
