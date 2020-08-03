@@ -5,11 +5,24 @@ using UnityEngine;
 public class obstacleDrop : obstacle
 {
     Rigidbody2D _rigbd;
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    protected override void Start()
     {
-        if (collision.collider.tag == "ground")
+        base.Start();
+
+        _rigbd = gameObject.GetComponent<Rigidbody2D>();
+        _rigbd.bodyType = RigidbodyType2D.Kinematic;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.name == "guy")
         {
-            _rigbd = gameObject.GetComponent<Rigidbody2D>();
+            _rigbd.bodyType = RigidbodyType2D.Dynamic;
+
+            //_rigbd.simulated = true;
+            //_rigbd.simulated = true;
         }
     }
 }

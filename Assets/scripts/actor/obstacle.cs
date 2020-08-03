@@ -9,7 +9,7 @@ public class obstacle : MonoBehaviour
     float pos;
     float dist = 0;
 
-    private void Start()
+    protected virtual void Start()
     {
         GameObject pl = GameObject.Find("guy");
         _guy = pl;
