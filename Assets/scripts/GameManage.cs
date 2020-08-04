@@ -9,9 +9,12 @@ public class GameManage : MonoBehaviour
     UIManage _uiManage;
     mainchar _mychar;
     public GameObject _start;
+    public mycamerafollow _mycam;
+
     // Start is called before the first frame update
     void Start()
     {
+        _mycam.Init();
         _gameobj = GameObject.Find("UIManage");
         _uiManage = _gameobj.GetComponent<UIManage>();
         _char = GameObject.Find("guy");
@@ -21,8 +24,6 @@ public class GameManage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_mychar._hp <= 0 || _mychar.transform.position.y <= -6) GameOver();
-
     }
 
     public void Respawn()

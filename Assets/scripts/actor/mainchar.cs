@@ -15,6 +15,8 @@ public class mainchar : character
     public GameManage _GameMana;
     public My2DUserControl _my2dcon;
     public GameObject _guy;
+    public GameObject SP;
+    Vector3 startPos;
     //int jump = 0;
 
 
@@ -32,7 +34,10 @@ public class mainchar : character
 
         _hp = _maxhp;
         _anim.SetInteger("hp", _hp);
-        _my2dcon = FindObjectOfType<My2DUserControl>();
+        _GameMana = FindObjectOfType<GameManage>();
+        _my2dcon = GetComponent<My2DUserControl>();
+        SP = GameObject.Find("StartPos");
+        startPos = new Vector3(SP.transform.position.x, SP.transform.position.y, SP.transform.position.z);
     }
 
     public void OnDmg(int dmg)
@@ -40,6 +45,11 @@ public class mainchar : character
         _hp -= dmg;
         _hp = Math.Max(0, _hp);
         _anim.SetInteger("hp", _hp);
+        if (_hp <= 0)
+        {
+            _GameMana.GameOver();
+        }
+
 
     }
 
@@ -52,7 +62,7 @@ public class mainchar : character
     // Update is called once per frame
     void Update()
     {
-
+        if (transform.position.y <= -6) OnDmg(_maxhp);
     }
 
     public void Jump()
@@ -75,6 +85,7 @@ public class mainchar : character
     public void Reborn()
     {
         OnHeal(_maxhp);
+        transform.position.Set(startPos.x, startPos.y, startPos.z);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

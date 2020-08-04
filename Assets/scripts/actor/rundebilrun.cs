@@ -12,7 +12,7 @@ public class rundebilrun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_mychar._hp <= 0) return;
+        if (_mychar._hp <= 0 || _mychar.transform.position.y <= -6) return;
 
         else
         {
