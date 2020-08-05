@@ -16,6 +16,8 @@ public class mainchar : character
     public My2DUserControl _my2dcon;
     public GameObject _guy;
     public GameObject SP;
+    CapsuleCollider2D _StdCol;
+    CapsuleCollider2D _SldCol;
     Vector3 startPos;
     //int jump = 0;
 
@@ -38,6 +40,8 @@ public class mainchar : character
         _my2dcon = GetComponent<My2DUserControl>();
         SP = GameObject.Find("StartPos");
         startPos = new Vector3(SP.transform.position.x, SP.transform.position.y, SP.transform.position.z);
+        _StdCol = gameObject.GetComponent<CapsuleCollider2D>();
+        _SldCol = gameObject.GetComponentInChildren<CapsuleCollider2D>();
     }
 
     public void OnDmg(int dmg)
@@ -63,6 +67,22 @@ public class mainchar : character
     void Update()
     {
         if (transform.position.y <= -6) OnDmg(_maxhp);
+
+        if(Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            _anim.SetBool("_SlidingNow", true);
+            Slide();
+            if (Input.GetKeyUp(KeyCode.LeftControl))
+            {
+                _SldCol.enabled = false;
+                _StdCol.enabled = true;
+                _anim.SetBool("onslide", false);
+                _anim.SetBool("IsStanding", true);
+                _anim.SetBool("_SlidingNow", false);
+            }
+        }
+
+       
     }
 
     public void Jump()
@@ -86,6 +106,14 @@ public class mainchar : character
     {
         OnHeal(_maxhp);
         transform.position.Set(startPos.x, startPos.y, startPos.z);
+    }
+
+    public void Slide()
+    {
+        _StdCol.enabled = false;
+        _SldCol.enabled = true;
+        _anim.SetBool("onslide", true);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
