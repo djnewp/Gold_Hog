@@ -81,6 +81,7 @@ public class mainchar : character
                 _StdCol.enabled = true;
                 _anim.SetBool("onslide", false);
                 _anim.SetBool("IsStanding", true);
+
             }
         }
 
