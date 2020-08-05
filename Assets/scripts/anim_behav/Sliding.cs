@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Sliding : StateMachineBehaviour
 {
-    bool _SlidingNow = false;
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -15,10 +14,7 @@ public class Sliding : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        while (_SlidingNow == true)
-        {
-            animator.Play("slide");
-        }
+        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -583,7 +583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6926698815251045195}
-  - component: {fileID: 6452378973579828254}
+  - component: {fileID: 6198691014021408885}
   m_Layer: 0
   m_Name: Land_1sc 1
   m_TagString: ground
@@ -599,7 +599,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1781624291250717131}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.331932, y: -2.4445436, z: -79.08433}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3251956724542730495}
@@ -629,7 +629,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &6452378973579828254
+--- !u!61 &6198691014021408885
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -642,7 +642,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2134018, y: 0.6881248}
+  m_Offset: {x: 0.23083359, y: 0.6829419}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -653,7 +653,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.6964111, y: 0.5837505}
+  m_Size: {x: 3.6742225, y: 0.56383085}
   m_EdgeRadius: 0
 --- !u!1 &1795928638842584196
 GameObject:

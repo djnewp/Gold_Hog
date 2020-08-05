@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq.Expressions;
 #if UNITY_EDITOR
 using TMPro.EditorUtilities;
 
@@ -70,19 +71,19 @@ public class mainchar : character
 
         if(Input.GetKeyDown(KeyCode.LeftControl))
         {
-            _anim.SetBool("_SlidingNow", true);
             Slide();
+            if(Input.GetKey(KeyCode.LeftControl))
+            {
+            }
             if (Input.GetKeyUp(KeyCode.LeftControl))
             {
                 _SldCol.enabled = false;
                 _StdCol.enabled = true;
                 _anim.SetBool("onslide", false);
                 _anim.SetBool("IsStanding", true);
-                _anim.SetBool("_SlidingNow", false);
             }
         }
 
-       
     }
 
     public void Jump()
