@@ -12,7 +12,7 @@ public class mainchar : character
     public Animator _anim;
     public float _jumpForce = 500.0f;
     public float _jumpMax = 350.0f;
-    public UIMng _uiM;
+    public UIManage _uiM;
     public GameManage _GameMana;
     public My2DUserControl _my2dcon;
     public GameObject _guy;
@@ -20,8 +20,6 @@ public class mainchar : character
     CapsuleCollider2D _StdCol;
     CapsuleCollider2D _SldCol;
     Vector3 startPos;
-
-    bool KeepSliding = false;
     //int jump = 0;
 
 
@@ -64,6 +62,7 @@ public class mainchar : character
     {
         _hp += heal;
         _hp = Math.Min(_maxhp, _hp);
+        _anim.SetInteger("hp", _hp);
     }
 
     // Update is called once per frame
@@ -78,7 +77,6 @@ public class mainchar : character
         
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
-            KeepSliding = false;
             _SldCol.enabled = false;
             _StdCol.enabled = true;
             _anim.SetBool("onslide", false);
@@ -105,15 +103,9 @@ public class mainchar : character
        // else return;
     }
 
-    public void Reborn()
-    {
-        OnHeal(_maxhp);
-        transform.position.Set(startPos.x, startPos.y, startPos.z);
-    }
 
     public void Slide()
     {
-        KeepSliding = true;
         _StdCol.enabled = false;
         _SldCol.enabled = true;
         _anim.SetBool("onslide", true);

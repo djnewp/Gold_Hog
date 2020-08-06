@@ -6,9 +6,9 @@ public class obstacleDrop : obstacle
 {
     Rigidbody2D _rigbd;
 
-    protected override void Start()
+    public override void Init()
     {
-        base.Start();
+        base.Init();
 
         _rigbd = gameObject.GetComponent<Rigidbody2D>();
         _rigbd.bodyType = RigidbodyType2D.Kinematic;

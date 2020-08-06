@@ -7,12 +7,12 @@ public class ui_base : MonoBehaviour
 
     public SoundManager _sndMng;
     public GameObject _gameobj;
-    public GameMng _gameMng;
+    public GameManage _gameMng;
     // Start is called before the first frame update
     public virtual void Init()
     {
         _sndMng = FindObjectOfType<SoundManager>();
-        _gameMng = FindObjectOfType<GameMng>();
+        _gameMng = FindObjectOfType<GameManage>();
     }
 
     // Update is called once per frame

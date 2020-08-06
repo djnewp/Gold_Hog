@@ -9,10 +9,12 @@ public class obstacle : MonoBehaviour
     float pos;
     float dist = 0;
 
-    protected virtual void Start()
+    public virtual void Init()
     {
         GameObject pl = GameObject.Find("guy");
-        _guy = pl;
+        if (pl != null)
+            _guy = pl;
+        else Debug.LogError("_guy is null");
         pos = gameObject.transform.position.x;
     }
 

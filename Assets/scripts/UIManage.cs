@@ -13,7 +13,7 @@ public class UIManage : MonoBehaviour
     GameObject _guy;
     
     // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
         Show("HPGauge", true);
         _gamemng = GameObject.Find("GameManage");
@@ -57,9 +57,8 @@ public class UIManage : MonoBehaviour
     }
 
     public void Restart()
-    {        
-        SceneManager.LoadScene("hog_main");
-        _main.Reborn();
+    {
+        _gamem.Respawn();
     }
     // Update is called once per frame
     void Update()

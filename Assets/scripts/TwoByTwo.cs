@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TwoByTwo : obstacle
 {
-   public void Init()
+   public override void Init()
     {
     }
 }
