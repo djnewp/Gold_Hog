@@ -256,6 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4017422032678302747}
   - component: {fileID: 2587860641942007943}
+  - component: {fileID: 8368608332518109982}
   m_Layer: 0
   m_Name: obstacle 2_2
   m_TagString: obstacle
@@ -271,7 +272,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6514863593702349434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.3307624, y: -1.36028, z: -4.754536}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7876625222118743822}
@@ -307,6 +308,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32035446, y: 0.3188269}
   m_EdgeRadius: 0
+--- !u!114 &8368608332518109982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6514863593702349434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8240390bb79713246acbf0301d897c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 10
 --- !u!1 &8232244226954498724
 GameObject:
   m_ObjectHideFlags: 0
