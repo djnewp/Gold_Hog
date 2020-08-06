@@ -20,6 +20,8 @@ public class mainchar : character
     CapsuleCollider2D _StdCol;
     CapsuleCollider2D _SldCol;
     Vector3 startPos;
+
+    bool KeepSliding = false;
     //int jump = 0;
 
 
@@ -72,17 +74,16 @@ public class mainchar : character
         if(Input.GetKeyDown(KeyCode.LeftControl))
         {
             Slide();
-            if(Input.GetKey(KeyCode.LeftControl))
-            {
-            }
-            if (Input.GetKeyUp(KeyCode.LeftControl))
-            {
-                _SldCol.enabled = false;
-                _StdCol.enabled = true;
-                _anim.SetBool("onslide", false);
-                _anim.SetBool("IsStanding", true);
+        }
+        
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            KeepSliding = false;
+            _SldCol.enabled = false;
+            _StdCol.enabled = true;
+            _anim.SetBool("onslide", false);
+            _anim.SetBool("IsStanding", true);
 
-            }
         }
 
     }
@@ -112,6 +113,7 @@ public class mainchar : character
 
     public void Slide()
     {
+        KeepSliding = true;
         _StdCol.enabled = false;
         _SldCol.enabled = true;
         _anim.SetBool("onslide", true);
