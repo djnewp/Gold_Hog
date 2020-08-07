@@ -316,8 +316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e90a1a9e99baf24a9188ffea8f3d47e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _runspd: 20
-  _maxspd: 2
+  _runspd: 0.1
+  _maxspd: 0.1
   _rigbd: {fileID: 7643305877787529238}
   _mychar: {fileID: 7643305877787529240}
 --- !u!50 &7643305877787529238

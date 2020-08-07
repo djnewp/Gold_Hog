@@ -42,7 +42,7 @@ public class mainchar : character
         SP = GameObject.Find("StartPos");
         startPos = new Vector3(SP.transform.position.x, SP.transform.position.y, SP.transform.position.z);
         _StdCol = gameObject.GetComponent<CapsuleCollider2D>();
-        _SldCol = gameObject.GetComponentInChildren<CapsuleCollider2D>();
+        _SldCol = gameObject.transform.Find("SlideCollider").GetComponent<CapsuleCollider2D>();
     }
 
     public void OnDmg(int dmg)
@@ -73,9 +73,8 @@ public class mainchar : character
         if(Input.GetKeyDown(KeyCode.LeftControl))
         {
             Slide();
-        }
-        
-        if (Input.GetKeyUp(KeyCode.LeftControl))
+        }        
+        else if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             _SldCol.enabled = false;
             _StdCol.enabled = true;
