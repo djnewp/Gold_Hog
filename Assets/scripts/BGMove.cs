@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class BGMove : MonoBehaviour
 {
-    public float _movspd;
-    public float _destPoint;
-    public float _origPoint;
-    
+    public float _movSpd = 20.0f;
+    public GameObject _cam;
 
 
     // Start is called before the first frame update
@@ -19,13 +17,10 @@ public class BGMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = transform.position;
-        float move = Time.deltaTime * _movspd;
-        transform.Translate(new Vector3(move, 0, 0));
+        Vector3 newPosition = transform.position;
+        newPosition.x = Mathf.Repeat(-Time.time * _movSpd, 50.0f);
+        transform.position = newPosition;
 
-        if (pos.x  >_destPoint)
-        {
-            transform.position = new Vector3(_origPoint, pos.y, pos.z);
-        }
+
     }
 }

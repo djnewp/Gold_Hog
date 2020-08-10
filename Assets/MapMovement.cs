@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class MapMovement : MonoBehaviour
 {
+    public float _MoveSpeed = 100.0f;
+    public float _MoveMax = 20.0f ;
+    Rigidbody2D _rigbd;
+    GameObject _guy;
+    mainchar _char;
+    public Vector2 StartPos;
+
     // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
-        
+        _rigbd = gameObject.GetComponent<Rigidbody2D>();
+        _guy = GameObject.Find("guy");
+        _char = _guy.GetComponent<mainchar>();
+        StartPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(_char._hp>0) Movement();
+        else return;
+
+    }
+
+    void Movement()
+    {
+        _rigbd.AddForce(new Vector2(_MoveSpeed, 0));
+        Vector2 vel = _rigbd.velocity;
+        float newVelX = Mathf.Min(_MoveSpeed, vel.x);
+        newVelX = Mathf.Min(_MoveMax, newVelX);
+        _rigbd.velocity = new Vector2(newVelX, vel.y);
     }
 }

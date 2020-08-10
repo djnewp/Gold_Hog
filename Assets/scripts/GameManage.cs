@@ -14,10 +14,13 @@ public class GameManage : MonoBehaviour
     public GameScreen _gameScreen;
 
     public GameObject _mapObj;
+    public MapMovement _move;
+    Animator _anim;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         _gameScreen.Init();
 
         _mycam.Init();
@@ -26,10 +29,11 @@ public class GameManage : MonoBehaviour
         _uiManage = _gameobj.GetComponent<UIManage>();
         _char = GameObject.Find("guy");
         _mychar = _char.GetComponent<mainchar>();
-
+        _move.Init();
+        _anim = _char.GetComponent<Animator>();
         obstacle[] obstacleList = _mapObj.GetComponentsInChildren<obstacle>(true);
         foreach (obstacle o in obstacleList)
-            o.Init();
+        o.Init();
     }
 
     // Update is called once per frame
@@ -43,11 +47,13 @@ public class GameManage : MonoBehaviour
         _mychar.transform.position = SP;
         _mychar.OnHeal(_mychar._maxhp);
         _uiManage.Show("HPGauge", true);
+        _move.transform.Translate(_move.StartPos);
     }
 
     public void GameOver()
     {
         _mychar._hp = 0;
+        _anim.SetInteger("hp", _mychar._hp);
         _uiManage.Show("ResultScreen", true);
         //게임오버 및 재시작 UI 표시하기
 

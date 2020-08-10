@@ -82,6 +82,10 @@ public class mainchar : character
             _anim.SetBool("IsStanding", true);
 
         }
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
 
     }
 
@@ -119,9 +123,13 @@ public class mainchar : character
             //jump = 0;
         }
 
+        if(collision.gameObject.name == "GameOverLine")
+        {
+            _GameMana.GameOver();
+        }
 
     }
 
 
     
-    }
+}

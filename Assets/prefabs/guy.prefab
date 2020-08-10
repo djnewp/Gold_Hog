@@ -186,7 +186,6 @@ GameObject:
   - component: {fileID: 7643305877787529242}
   - component: {fileID: 7643305877787529243}
   - component: {fileID: 7643305877787529240}
-  - component: {fileID: 7643305877787529241}
   - component: {fileID: 7643305877787529238}
   - component: {fileID: 7643305877787529239}
   - component: {fileID: 7643305877787529244}
@@ -276,10 +275,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigid: {fileID: 7643305877787529238}
-  _moveForce: 8
-  _moveMax: 3
+  _moveForce: 0
+  _moveMax: 0
   _myChar2D: {fileID: 0}
-  _backForce: -6
+  _backForce: 0
 --- !u!114 &7643305877787529240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,22 +303,6 @@ MonoBehaviour:
   _guy: {fileID: 7643305877787529236}
   SP: {fileID: 0}
   _jumpSnd: {fileID: 7183622031483568777}
---- !u!114 &7643305877787529241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7643305877787529236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e90a1a9e99baf24a9188ffea8f3d47e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _runspd: 10
-  _maxspd: 2
-  _rigbd: {fileID: 7643305877787529238}
-  _mychar: {fileID: 7643305877787529240}
 --- !u!50 &7643305877787529238
 Rigidbody2D:
   serializedVersion: 4
