@@ -47,7 +47,7 @@ public class GameManage : MonoBehaviour
         _mychar.transform.position = SP;
         _mychar.OnHeal(_mychar._maxhp);
         _uiManage.Show("HPGauge", true);
-        _move.transform.Translate(_move.StartPos);
+        _move.transform.position = _move.transform.localPosition;
     }
 
     public void GameOver()

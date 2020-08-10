@@ -9,7 +9,6 @@ public class MapMovement : MonoBehaviour
     Rigidbody2D _rigbd;
     GameObject _guy;
     mainchar _char;
-    public Vector2 StartPos;
 
     // Start is called before the first frame update
     public void Init()
@@ -17,7 +16,6 @@ public class MapMovement : MonoBehaviour
         _rigbd = gameObject.GetComponent<Rigidbody2D>();
         _guy = GameObject.Find("guy");
         _char = _guy.GetComponent<mainchar>();
-        StartPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
     }
 
     // Update is called once per frame

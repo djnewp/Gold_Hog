@@ -17,10 +17,6 @@ public class BGMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 newPosition = transform.position;
-        newPosition.x = Mathf.Repeat(-Time.time * _movSpd, 50.0f);
-        transform.position = newPosition;
-
-
+        
     }
 }
