@@ -16,6 +16,7 @@ public class GameManage : MonoBehaviour
     public GameObject _mapObj;
     public MapMovement _move;
     Animator _anim;
+    public Rigidbody2D _maprig;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class GameManage : MonoBehaviour
         obstacle[] obstacleList = _mapObj.GetComponentsInChildren<obstacle>(true);
         foreach (obstacle o in obstacleList)
         o.Init();
+        _maprig = GameObject.Find("map").GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -47,7 +49,10 @@ public class GameManage : MonoBehaviour
         _mychar.transform.position = SP;
         _mychar.OnHeal(_mychar._maxhp);
         _uiManage.Show("HPGauge", true);
-        _move.transform.position = _move.transform.localPosition;
+        _move.transform.position = _move.StartPos;
+        _maprig.bodyType = RigidbodyType2D.Dynamic;
+        
+        
     }
 
     public void GameOver()

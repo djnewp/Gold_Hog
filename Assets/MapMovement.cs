@@ -9,6 +9,7 @@ public class MapMovement : MonoBehaviour
     Rigidbody2D _rigbd;
     GameObject _guy;
     mainchar _char;
+    public Vector2 StartPos;
 
     // Start is called before the first frame update
     public void Init()
@@ -16,22 +17,31 @@ public class MapMovement : MonoBehaviour
         _rigbd = gameObject.GetComponent<Rigidbody2D>();
         _guy = GameObject.Find("guy");
         _char = _guy.GetComponent<mainchar>();
+        StartPos = transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(_char._hp>0) Movement();
-        else return;
+        Movement();
+        
 
     }
 
     void Movement()
     {
-        _rigbd.AddForce(new Vector2(_MoveSpeed, 0));
-        Vector2 vel = _rigbd.velocity;
-        float newVelX = Mathf.Min(_MoveSpeed, vel.x);
-        newVelX = Mathf.Min(_MoveMax, newVelX);
-        _rigbd.velocity = new Vector2(newVelX, vel.y);
+        if (_char._hp > 0)
+        {
+            _rigbd.AddForce(new Vector2(_MoveSpeed, 0));
+            Vector2 vel = _rigbd.velocity;
+            float newVelX = Mathf.Min(_MoveSpeed, vel.x);
+            newVelX = Mathf.Min(_MoveMax, newVelX);
+            _rigbd.velocity = new Vector2(newVelX, vel.y);
+        }
+
+        else
+        {
+            _rigbd.bodyType = RigidbodyType2D.Static;
+        }
     }
 }
