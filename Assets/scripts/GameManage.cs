@@ -34,6 +34,7 @@ public class GameManage : MonoBehaviour
             return _instance;
         }
     }
+    public bool IsGameOver = false;
 
     // Start is called before the first frame update
     void Start()
@@ -67,7 +68,7 @@ public class GameManage : MonoBehaviour
         _uiManage.Show("HPGauge", true);
         _move.transform.position = _move.StartPos;
         _maprig.bodyType = RigidbodyType2D.Dynamic;
-        
+        IsGameOver = false;
         
     }
 
@@ -76,6 +77,7 @@ public class GameManage : MonoBehaviour
         _mychar._hp = 0;
         _anim.SetInteger("hp", _mychar._hp);
         _uiManage.Show("ResultScreen", true);
+        IsGameOver = true;
         //게임오버 및 재시작 UI 표시하기
 
     }

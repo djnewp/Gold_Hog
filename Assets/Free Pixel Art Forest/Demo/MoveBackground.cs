@@ -10,6 +10,7 @@ public class MoveBackground : MonoBehaviour {
 	private float x;
 	public float DestPos;
 	public float StartPos;
+	GameManage _gamemng;
 
 
 
@@ -17,25 +18,34 @@ public class MoveBackground : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//StartPos = transform.position.x;
+		_gamemng = GameManage.Instance;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 
-		x = transform.position.x;
-		x += speed * Time.deltaTime;
-		transform.position = new Vector3 (x, transform.position.y, transform.position.z);
+		if (_gamemng.IsGameOver != true)
+		{
+			x = transform.position.x;
+			x += speed * Time.deltaTime;
+			transform.position = new Vector3(x, transform.position.y, transform.position.z);
 
 
 
-		if (x <= DestPos){
+			if (x <= DestPos)
+			{
 
-			Debug.Log ("hhhh");
-			x = StartPos;
-			transform.position = new Vector3 (x, transform.position.y, transform.position.z);
+				Debug.Log("hhhh");
+				x = StartPos;
+				transform.position = new Vector3(x, transform.position.y, transform.position.z);
+			}
+
 		}
 
+		if (_gamemng.IsGameOver == true)
+        {
 
+        }
 	}
 }
