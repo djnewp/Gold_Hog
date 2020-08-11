@@ -7,7 +7,6 @@ public class MapMovement : MonoBehaviour
     public float _MoveSpeed = 100.0f;
     public float _MoveMax = 20.0f ;
     Rigidbody2D _rigbd;
-    mainchar _char;
     public Vector2 StartPos;
 
     // Start is called before the first frame update
@@ -27,7 +26,7 @@ public class MapMovement : MonoBehaviour
 
     void Movement()
     {
-        if (_char._hp > 0)
+        if (mainchar.Instance._hp > 0)
         {
             _rigbd.AddForce(new Vector2(_MoveSpeed, 0));
             Vector2 vel = _rigbd.velocity;

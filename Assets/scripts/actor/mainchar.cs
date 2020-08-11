@@ -60,6 +60,7 @@ public class mainchar : character
         startPos = new Vector3(SP.transform.position.x, SP.transform.position.y, SP.transform.position.z);
         _StdCol = gameObject.GetComponent<CapsuleCollider2D>();
         _SldCol = gameObject.transform.Find("SlideCollider").GetComponent<CapsuleCollider2D>();
+        _GameMana = GameManage.Instance;
     }
 
     public void OnDmg(int dmg)

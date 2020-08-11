@@ -22,6 +22,7 @@ public class My2DUserControl : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        _myChar2D = mainchar.Instance;
     }
 
     // Update is called once per frame

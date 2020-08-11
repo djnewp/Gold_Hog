@@ -5,20 +5,21 @@ using UnityEngine.UI;
 
 public class HPGauge : MonoBehaviour
 {
-    mainchar _mainc;
     Image _p;
+    mainchar _mychar;
 
     // Start is called before the first frame update
     void Start()
     {
         _p = gameObject.GetComponentInChildren<Image>();
+        _mychar = mainchar.Instance;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float hp = _mainc._hp;
-        float maxhp = _mainc._maxhp;
+        float hp = _mychar._hp;
+        float maxhp = _mychar._maxhp;
         _p.fillAmount = hp / maxhp;
     }
 }

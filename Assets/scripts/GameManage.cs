@@ -5,7 +5,6 @@ using UnityEngine;
 public class GameManage : MonoBehaviour
 {
     GameObject _gameobj;
-    GameObject _char;
     UIManage _uiManage;
     mainchar _mychar;
     public GameObject _start;
@@ -43,11 +42,12 @@ public class GameManage : MonoBehaviour
         _gameScreen.Init();
 
         _mycam.Init();
+        _mychar = mainchar.Instance;
 
         _gameobj = GameObject.Find("UIManage");
         _uiManage = _gameobj.GetComponent<UIManage>();
         _move.Init();
-        _anim = _char.GetComponent<Animator>();
+        _anim = _mychar.GetComponent<Animator>();
         obstacle[] obstacleList = _mapObj.GetComponentsInChildren<obstacle>(true);
         foreach (obstacle o in obstacleList)
         o.Init();
