@@ -12,7 +12,6 @@ public class ui_base : MonoBehaviour
     public virtual void Init()
     {
         _sndMng = FindObjectOfType<SoundManager>();
-        _gameMng = FindObjectOfType<GameManage>();
     }
 
     // Update is called once per frame

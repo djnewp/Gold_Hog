@@ -18,6 +18,24 @@ public class GameManage : MonoBehaviour
     Animator _anim;
     public Rigidbody2D _maprig;
 
+    [HideInInspector]
+    public static GameManage _instance;
+    public static GameManage Instance
+    {
+        get
+        {
+            if (null == _instance)
+            {
+                _instance = FindObjectOfType(typeof(GameManage)) as GameManage;
+                if (null == _instance)
+                {
+                    Debug.LogError("GameManage 가져오기 실패");
+                }
+            }
+            return _instance;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +46,6 @@ public class GameManage : MonoBehaviour
 
         _gameobj = GameObject.Find("UIManage");
         _uiManage = _gameobj.GetComponent<UIManage>();
-        _char = GameObject.Find("guy");
-        _mychar = _char.GetComponent<mainchar>();
         _move.Init();
         _anim = _char.GetComponent<Animator>();
         obstacle[] obstacleList = _mapObj.GetComponentsInChildren<obstacle>(true);

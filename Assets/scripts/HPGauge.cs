@@ -5,15 +5,12 @@ using UnityEngine.UI;
 
 public class HPGauge : MonoBehaviour
 {
-    GameObject _char;
     mainchar _mainc;
     Image _p;
 
     // Start is called before the first frame update
     void Start()
     {
-        _char = GameObject.Find("guy");
-        _mainc = _char.GetComponent<mainchar>();
         _p = gameObject.GetComponentInChildren<Image>();
     }
 

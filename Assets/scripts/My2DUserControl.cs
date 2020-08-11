@@ -22,7 +22,6 @@ public class My2DUserControl : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        _myChar2D = GetComponent<mainchar>();
     }
 
     // Update is called once per frame

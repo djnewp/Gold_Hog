@@ -7,7 +7,6 @@ public class MapMovement : MonoBehaviour
     public float _MoveSpeed = 100.0f;
     public float _MoveMax = 20.0f ;
     Rigidbody2D _rigbd;
-    GameObject _guy;
     mainchar _char;
     public Vector2 StartPos;
 
@@ -15,8 +14,6 @@ public class MapMovement : MonoBehaviour
     public void Init()
     {
         _rigbd = gameObject.GetComponent<Rigidbody2D>();
-        _guy = GameObject.Find("guy");
-        _char = _guy.GetComponent<mainchar>();
         StartPos = transform.localPosition;
     }
 

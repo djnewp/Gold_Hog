@@ -25,6 +25,24 @@ public class mainchar : character
 
     public AudioSource _jumpSnd;
 
+    [HideInInspector]
+    public static mainchar _instance;
+    public static mainchar Instance
+    {
+        get
+        {
+            if(null==_instance)
+            {
+                _instance = FindObjectOfType(typeof(mainchar)) as mainchar;
+                if(null ==_instance)
+                {
+                    Debug.LogError("mainchar 가져오기 실패");
+                }
+            }
+            return _instance;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +55,6 @@ public class mainchar : character
 
         _hp = _maxhp;
         _anim.SetInteger("hp", _hp);
-        _GameMana = FindObjectOfType<GameManage>();
         _my2dcon = GetComponent<My2DUserControl>();
         SP = GameObject.Find("StartPos");
         startPos = new Vector3(SP.transform.position.x, SP.transform.position.y, SP.transform.position.z);
