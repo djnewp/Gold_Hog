@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Free Pixel Art Forest\Demo\MoveBackground.cs" />
     <Compile Include="Assets\FreeParallax\Scripts\FreeParallax.cs" />
     <Compile Include="Assets\FreeParallax\Scripts\FreeParallaxDemo.cs" />
     <Compile Include="Assets\MapMovement.cs" />
@@ -118,7 +119,10 @@
     <Compile Include="Assets\sound.cs" />
     <Compile Include="Assets\up.cs" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
+    <None Include="Assets\Free Pixel Art Forest\Contact.txt" />
     <None Include="Assets\FreeParallax\Readme.txt" />
+    <None Include="Assets\Free Pixel Art Forest\Lisense.txt" />
+    <None Include="Assets\Free Pixel Art Forest\readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

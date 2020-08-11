@@ -202,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48420983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -27.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 77705818}
@@ -581,6 +581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 143162879}
   - component: {fileID: 143162880}
+  - component: {fileID: 143162881}
   m_Layer: 0
   m_Name: cave_0001_mid (4)
   m_TagString: Untagged
@@ -596,7 +597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143162878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.3125, y: -0.49, z: 17.98723}
+  m_LocalPosition: {x: 0.35, y: -0.7, z: 17.98723}
   m_LocalScale: {x: 0.04381131, y: 0.04381131, z: 0.04381131}
   m_Children: []
   m_Father: {fileID: 1413852507}
@@ -652,6 +653,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &143162881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143162878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -2
+  DestPos: -12
+  StartPos: 2.0775
 --- !u!4 &217443267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8978962864874430887, guid: c44dfde6feedc624d8abbecb9ce16a7c,
@@ -743,6 +759,7 @@ GameObject:
   m_Component:
   - component: {fileID: 280461603}
   - component: {fileID: 280461604}
+  - component: {fileID: 280461605}
   m_Layer: 0
   m_Name: BG3
   m_TagString: Untagged
@@ -758,7 +775,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280461602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.94, y: 0.30937, z: -11.595}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.6446, y: 1.6446, z: 1.6446}
   m_Children:
   - {fileID: 1450589521}
@@ -769,7 +786,28 @@ Transform:
   m_Father: {fileID: 1904533683}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &280461604
+--- !u!50 &280461604
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280461602}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &280461605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -778,11 +816,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 280461602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad3e3ca7e78f3dc439b3255738f8f01d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movSpd: 5
-  _cam: {fileID: 519420028}
+  speed: 0
+  DestPos: 0
+  StartPos: 0
 --- !u!1 &287202465
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,6 +832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 287202466}
   - component: {fileID: 287202467}
+  - component: {fileID: 287202468}
   m_Layer: 0
   m_Name: cave_0000_front (5)
   m_TagString: Untagged
@@ -808,7 +848,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287202465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.893, y: -0.48059952, z: 17.98723}
+  m_LocalPosition: {x: 1.94, y: -0.75, z: 17.98723}
   m_LocalScale: {x: 0.042918872, y: 0.042918872, z: 0.042918872}
   m_Children: []
   m_Father: {fileID: 1616001771}
@@ -864,6 +904,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &287202468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287202465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -3
+  DestPos: -11
+  StartPos: 1.94
 --- !u!4 &321271345 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1663971431617656402, guid: 8a36c1a27d1632f478b6a269c21c0d80,
@@ -913,6 +968,7 @@ GameObject:
   m_Component:
   - component: {fileID: 488244438}
   - component: {fileID: 488244437}
+  - component: {fileID: 488244439}
   m_Layer: 0
   m_Name: cave_0001_mid (2)
   m_TagString: Untagged
@@ -978,12 +1034,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488244436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.85, y: -0.49, z: 17.98723}
+  m_LocalPosition: {x: -3.1094997, y: -0.7, z: 17.98723}
   m_LocalScale: {x: 0.04381131, y: 0.04381131, z: 0.04381131}
   m_Children: []
   m_Father: {fileID: 1413852507}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &488244439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488244436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -2
+  DestPos: -12
+  StartPos: 2.0775
 --- !u!1001 &503634375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1235,6 +1306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 723179479}
   - component: {fileID: 723179480}
+  - component: {fileID: 723179481}
   m_Layer: 0
   m_Name: cave_0000_front (3)
   m_TagString: Untagged
@@ -1250,7 +1322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723179478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.5129995, y: -0.48059952, z: 17.98723}
+  m_LocalPosition: {x: -1.4400005, y: -0.75, z: 17.98723}
   m_LocalScale: {x: 0.042918872, y: 0.042918872, z: 0.042918872}
   m_Children: []
   m_Father: {fileID: 1616001771}
@@ -1306,6 +1378,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &723179481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723179478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -3
+  DestPos: -11
+  StartPos: 1.94
 --- !u!4 &729412383 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6926698815251045195, guid: e305bbc5dd62cc640877a8ced56e6761,
@@ -1739,6 +1826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 884442183}
   - component: {fileID: 884442184}
+  - component: {fileID: 884442185}
   m_Layer: 0
   m_Name: cave_0002_back (3)
   m_TagString: Untagged
@@ -1754,7 +1842,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884442182}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.6337996, y: -0.46, z: 17.98723}
+  m_LocalPosition: {x: -1.3400003, y: -0.71, z: 17.98723}
   m_LocalScale: {x: 0.04331954, y: 0.04331954, z: 0.04331954}
   m_Children: []
   m_Father: {fileID: 280461603}
@@ -1810,6 +1898,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &884442185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884442182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -1
+  DestPos: -13
+  StartPos: 0
 --- !u!4 &912229516 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9220602594491402860, guid: e102fcff95d5eeb47b43e4ac46594d02,
@@ -2090,6 +2193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1028796294}
   - component: {fileID: 1028796295}
+  - component: {fileID: 1028796296}
   m_Layer: 0
   m_Name: cave_0000_front (4)
   m_TagString: Untagged
@@ -2105,7 +2209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028796293}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.213, y: -0.48059952, z: 17.98723}
+  m_LocalPosition: {x: 0.25999975, y: -0.75, z: 17.98723}
   m_LocalScale: {x: 0.042918872, y: 0.042918872, z: 0.042918872}
   m_Children: []
   m_Father: {fileID: 1616001771}
@@ -2161,6 +2265,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1028796296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028796293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -3
+  DestPos: -11
+  StartPos: 1.94
 --- !u!1001 &1037731511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2251,6 +2370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086376645}
   - component: {fileID: 1086376646}
+  - component: {fileID: 1086376647}
   m_Layer: 0
   m_Name: cave_0001_mid (5)
   m_TagString: Untagged
@@ -2266,7 +2386,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1086376644}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.0713997, y: -0.49, z: 17.98723}
+  m_LocalPosition: {x: 2.0775, y: -0.7, z: 17.98723}
   m_LocalScale: {x: 0.04381131, y: 0.04381131, z: 0.04381131}
   m_Children: []
   m_Father: {fileID: 1413852507}
@@ -2322,6 +2442,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1086376647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086376644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -2
+  DestPos: -12
+  StartPos: 2.0775
 --- !u!1 &1106498914 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6514863593702349434, guid: bdac3b5ed31f6d7418fd92d8d0cc653d,
@@ -2715,6 +2850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1210874749}
   - component: {fileID: 1210874750}
+  - component: {fileID: 1210874751}
   m_Layer: 0
   m_Name: cave_0002_back (4)
   m_TagString: Untagged
@@ -2730,7 +2866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210874748}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.342, y: -0.46, z: 17.98723}
+  m_LocalPosition: {x: 0.3682002, y: -0.71, z: 17.98723}
   m_LocalScale: {x: 0.04331954, y: 0.04331954, z: 0.04331954}
   m_Children: []
   m_Father: {fileID: 280461603}
@@ -2786,6 +2922,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1210874751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210874748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -1
+  DestPos: -13
+  StartPos: 0
 --- !u!4 &1213265388 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1663971431617656402, guid: 8a36c1a27d1632f478b6a269c21c0d80,
@@ -2877,6 +3028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1291225512}
   - component: {fileID: 1291225511}
+  - component: {fileID: 1291225513}
   m_Layer: 0
   m_Name: cave_0000_front (1)
   m_TagString: Untagged
@@ -2942,12 +3094,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1291225510}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11601782, y: -0.48059952, z: 17.98723}
+  m_LocalPosition: {x: -4.8369823, y: -0.75, z: 17.98723}
   m_LocalScale: {x: 0.042918872, y: 0.042918872, z: 0.042918872}
   m_Children: []
   m_Father: {fileID: 1616001771}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291225513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291225510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -3
+  DestPos: -11
+  StartPos: 1.94
 --- !u!1001 &1302232632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3096,6 +3263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1319941103}
   - component: {fileID: 1319941102}
+  - component: {fileID: 1319941104}
   m_Layer: 0
   m_Name: cave_0001_mid (1)
   m_TagString: Untagged
@@ -3161,12 +3329,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1319941101}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09099996, y: -0.49, z: 17.98723}
+  m_LocalPosition: {x: -4.8615003, y: -0.7, z: 17.98723}
   m_LocalScale: {x: 0.04381131, y: 0.04381131, z: 0.04381131}
   m_Children: []
   m_Father: {fileID: 1413852507}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1319941104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319941101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -2
+  DestPos: -12
+  StartPos: 2.0775
 --- !u!1 &1336322465 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6514863593702349434, guid: bdac3b5ed31f6d7418fd92d8d0cc653d,
@@ -3350,6 +3533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1413852507}
   - component: {fileID: 1413852508}
+  - component: {fileID: 1413852509}
   m_Layer: 0
   m_Name: BG2
   m_TagString: Untagged
@@ -3365,7 +3549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413852506}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.25, y: 0.30937, z: -11.595}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.6446, y: 1.6446, z: 1.6446}
   m_Children:
   - {fileID: 1319941103}
@@ -3376,7 +3560,28 @@ Transform:
   m_Father: {fileID: 1904533683}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1413852508
+--- !u!50 &1413852508
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413852506}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1413852509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3385,11 +3590,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1413852506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad3e3ca7e78f3dc439b3255738f8f01d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movSpd: 10
-  _cam: {fileID: 519420028}
+  speed: 0
+  DestPos: 0
+  StartPos: 0
 --- !u!4 &1424907947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6926698815251045195, guid: e305bbc5dd62cc640877a8ced56e6761,
@@ -3418,6 +3624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450589521}
   - component: {fileID: 1450589520}
+  - component: {fileID: 1450589522}
   m_Layer: 0
   m_Name: cave_0002_back (1)
   m_TagString: Untagged
@@ -3483,12 +3690,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450589519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.20379972, y: -0.46, z: 17.98723}
+  m_LocalPosition: {x: -4.77, y: -0.71, z: 17.98723}
   m_LocalScale: {x: 0.04331954, y: 0.04331954, z: 0.04331954}
   m_Children: []
   m_Father: {fileID: 280461603}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1450589522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450589519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -1
+  DestPos: -13
+  StartPos: 0
 --- !u!1 &1552759968
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,7 +4016,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616001770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.894199, y: 0.30937, z: -11.595}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.6446, y: 1.6446, z: 1.6446}
   m_Children:
   - {fileID: 1291225512}
@@ -3802,23 +4024,31 @@ Transform:
   - {fileID: 723179479}
   - {fileID: 1028796294}
   - {fileID: 287202466}
+  - {fileID: 2071121149}
   m_Father: {fileID: 1904533683}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1616001772
-MonoBehaviour:
+--- !u!50 &1616001772
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616001770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad3e3ca7e78f3dc439b3255738f8f01d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _movSpd: 20
-  _cam: {fileID: 519420028}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1641244826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6926698815251045195, guid: e305bbc5dd62cc640877a8ced56e6761,
@@ -4479,6 +4709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1773360027}
   - component: {fileID: 1773360028}
+  - component: {fileID: 1773360029}
   m_Layer: 0
   m_Name: cave_0001_mid (3)
   m_TagString: Untagged
@@ -4494,7 +4725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773360026}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.6122, y: -0.49, z: 17.98723}
+  m_LocalPosition: {x: -1.3595, y: -0.7, z: 17.98723}
   m_LocalScale: {x: 0.04381131, y: 0.04381131, z: 0.04381131}
   m_Children: []
   m_Father: {fileID: 1413852507}
@@ -4550,6 +4781,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1773360029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773360026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -2
+  DestPos: -12
+  StartPos: 2.0775
 --- !u!4 &1782538573 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9220602594491402860, guid: e102fcff95d5eeb47b43e4ac46594d02,
@@ -4706,7 +4952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb253e5fbb41914b9bd32bb99394485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _MoveSpeed: -2
+  _MoveSpeed: -3
   _MoveMax: 5
   StartPos: {x: 0, y: 0}
 --- !u!50 &1842073028
@@ -4903,7 +5149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904533682}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.14, y: -0.3194005, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 48420984}
@@ -4923,6 +5169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1924894948}
   - component: {fileID: 1924894947}
+  - component: {fileID: 1924894949}
   m_Layer: 0
   m_Name: cave_0002_back (2)
   m_TagString: Untagged
@@ -4988,12 +5235,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924894946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9119997, y: -0.46, z: 17.98723}
+  m_LocalPosition: {x: -3.0618, y: -0.71, z: 17.98723}
   m_LocalScale: {x: 0.04331954, y: 0.04331954, z: 0.04331954}
   m_Children: []
   m_Father: {fileID: 280461603}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1924894949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924894946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -1
+  DestPos: -13
+  StartPos: 0
 --- !u!1 &1968528781
 GameObject:
   m_ObjectHideFlags: 0
@@ -5004,6 +5266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1968528783}
   - component: {fileID: 1968528782}
+  - component: {fileID: 1968528784}
   m_Layer: 0
   m_Name: cave_0000_front (2)
   m_TagString: Untagged
@@ -5069,12 +5332,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968528781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7960176, y: -0.48059952, z: 17.98723}
+  m_LocalPosition: {x: -3.153, y: -0.75, z: 17.98723}
   m_LocalScale: {x: 0.042918872, y: 0.042918872, z: 0.042918872}
   m_Children: []
   m_Father: {fileID: 1616001771}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1968528784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968528781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -3
+  DestPos: -11
+  StartPos: 1.94
 --- !u!1001 &2043683828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5260,6 +5538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2055915327}
   - component: {fileID: 2055915328}
+  - component: {fileID: 2055915329}
   m_Layer: 0
   m_Name: cave_0002_back (5)
   m_TagString: Untagged
@@ -5275,7 +5554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055915326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.05, y: -0.46, z: 17.98723}
+  m_LocalPosition: {x: 2.0762005, y: -0.71, z: 17.98723}
   m_LocalScale: {x: 0.04331954, y: 0.04331954, z: 0.04331954}
   m_Children: []
   m_Father: {fileID: 280461603}
@@ -5331,6 +5610,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2055915329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055915326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e32b7281e96947899f72129830dbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -1
+  DestPos: -13
+  StartPos: 2.0762
 --- !u!1001 &2070255236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5400,6 +5694,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e305bbc5dd62cc640877a8ced56e6761, type: 3}
+--- !u!1 &2071121148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2071121149}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2071121149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071121148}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.54, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1616001771}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2088682689
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5984,7 +6308,7 @@ PrefabInstance:
     - target: {fileID: 9220602594491402860, guid: e102fcff95d5eeb47b43e4ac46594d02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 0.692
       objectReference: {fileID: 0}
     - target: {fileID: 9220602594491402860, guid: e102fcff95d5eeb47b43e4ac46594d02,
         type: 3}
