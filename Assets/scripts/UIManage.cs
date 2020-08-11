@@ -13,6 +13,7 @@ public class UIManage : MonoBehaviour
     public void Init()
     {
         Show("HPGauge", true);
+        _gamem = GameManage.Instance;
     }
     public void HideAll()
     {
