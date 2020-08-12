@@ -39,7 +39,7 @@ public class MoveBackground : MonoBehaviour {
 			if (x <= DestPos)
 			{
 				
-				Debug.Log("hhhh");
+				//Debug.Log("hhhh");
 				x = StartPos;
 				transform.position = new Vector3(x, transform.position.y, transform.position.z);
 			}

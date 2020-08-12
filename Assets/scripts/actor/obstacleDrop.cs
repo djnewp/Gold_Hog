@@ -5,6 +5,7 @@ using UnityEngine;
 public class obstacleDrop : obstacle
 {
     Rigidbody2D _rigbd;
+    float waiting;
     //MapMovement _move;
 
     public override void Init()
@@ -13,6 +14,7 @@ public class obstacleDrop : obstacle
 
         _rigbd = gameObject.GetComponent<Rigidbody2D>();
         _rigbd.bodyType = RigidbodyType2D.Kinematic;
+        
         //_move = GameObject.Find("map").GetComponent<MapMovement>();
         //.gravityScale = 0;
         //bodyType = RigidbodyType2D.Kinematic;
@@ -29,10 +31,11 @@ public class obstacleDrop : obstacle
         if(collision.gameObject.name == "guy")
         {
             //_rigbd.gravityScale = 1;
-                
+            
             _rigbd.bodyType = RigidbodyType2D.Dynamic;
             
 
         }
     }
+
 }

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class GameManage : MonoBehaviour
 {
-    GameObject _gameobj;
     UIManage _uiManage;
     mainchar _mychar;
     public GameObject _start;
@@ -53,8 +52,7 @@ public class GameManage : MonoBehaviour
         _mycam.Init();
         _mychar = mainchar.Instance;
 
-        _gameobj = GameObject.Find("UIManage");
-        _uiManage = _gameobj.GetComponent<UIManage>();
+        _uiManage = GameObject.Find("UIManage").GetComponent<UIManage>();
         _move.Init();
         _anim = _mychar.GetComponent<Animator>();
         obstacle[] obstacleList = _mapObj.GetComponentsInChildren<obstacle>(true);
@@ -85,6 +83,7 @@ public class GameManage : MonoBehaviour
         _maprig.bodyType = RigidbodyType2D.Dynamic;
         IsGameOver = false;
         Score = 0;
+        _text.enabled = true;
         
     }
 
@@ -94,6 +93,7 @@ public class GameManage : MonoBehaviour
         _anim.SetInteger("hp", _mychar._hp);
         _uiManage.Show("ResultScreen", true);
         IsGameOver = true;
+        _text.enabled = false;
         //게임오버 및 재시작 UI 표시하기
 
     }
