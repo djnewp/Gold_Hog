@@ -20,7 +20,7 @@ public class obstacle : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.name == "guy")
+        if (collision.collider.name == "guy" || collision.collider.name == "GameOverLine")
         {
             Destroy(gameObject);
             gameObject.SetActive(false);
