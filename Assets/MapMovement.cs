@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MapMovement : MonoBehaviour
 {
-    public float _MoveSpeed = 100.0f;
-    public float _MoveMax = 20.0f ;
+    public float _MoveSpeed = -2.03f;
+    public float _MoveMax = 4.11f ;
     Rigidbody2D _rigbd;
     public Vector2 StartPos;
 
@@ -30,8 +30,8 @@ public class MapMovement : MonoBehaviour
         {
             _rigbd.AddForce(new Vector2(_MoveSpeed, 0));
             Vector2 vel = _rigbd.velocity;
-            float newVelX = Mathf.Min(_MoveSpeed, vel.x);
-            newVelX = Mathf.Min(_MoveMax, newVelX);
+            float newVelX = Mathf.Max(_MoveSpeed, vel.x);
+            newVelX = Mathf.Max(_MoveMax, newVelX);
             _rigbd.velocity = new Vector2(newVelX, vel.y);
         }
 
