@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManage : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class GameManage : MonoBehaviour
     public GameObject _mapObj;
     public MapMovement _move;
     Animator _anim;
+    Text _text;
     public Rigidbody2D _maprig;
 
     [HideInInspector]
@@ -34,7 +36,11 @@ public class GameManage : MonoBehaviour
             return _instance;
         }
     }
+
+    [HideInInspector]
     public bool IsGameOver = false;
+    public float Score;
+
 
     // Start is called before the first frame update
     void Start()
@@ -53,11 +59,18 @@ public class GameManage : MonoBehaviour
         foreach (obstacle o in obstacleList)
         o.Init();
         _maprig = GameObject.Find("map").GetComponent<Rigidbody2D>();
+        _text = GameObject.Find("Score").GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (IsGameOver != true)
+        {
+            Score += Time.deltaTime * 10;
+            _text.text = (Score.ToString("N1") + "m");
+            
+        }
     }
 
     public void Respawn()

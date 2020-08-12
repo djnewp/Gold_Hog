@@ -7,6 +7,7 @@ public class MoveBackground : MonoBehaviour {
 
 
 	public float speed;
+	float _SpdDefalt;
 	private float x;
 	public float DestPos;
 	public float StartPos;
@@ -19,6 +20,7 @@ public class MoveBackground : MonoBehaviour {
 	void Start () {
 		//StartPos = transform.position.x;
 		_gamemng = GameManage.Instance;
+		_SpdDefalt = speed;
 	}
 	
 	// Update is called once per frame
@@ -27,6 +29,7 @@ public class MoveBackground : MonoBehaviour {
 
 		if (_gamemng.IsGameOver != true)
 		{
+			speed = _SpdDefalt;
 			x = transform.position.x;
 			x += speed * Time.deltaTime;
 			transform.position = new Vector3(x, transform.position.y, transform.position.z);
@@ -35,7 +38,7 @@ public class MoveBackground : MonoBehaviour {
 
 			if (x <= DestPos)
 			{
-
+				
 				Debug.Log("hhhh");
 				x = StartPos;
 				transform.position = new Vector3(x, transform.position.y, transform.position.z);
@@ -45,7 +48,7 @@ public class MoveBackground : MonoBehaviour {
 
 		if (_gamemng.IsGameOver == true)
         {
-
+			speed = 0;
         }
 	}
 }
