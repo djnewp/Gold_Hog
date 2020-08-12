@@ -37,10 +37,12 @@ public class GameManage : MonoBehaviour
         }
     }
 
+    #region 내부로직
     [HideInInspector]
     public bool IsGameOver = false;
+    [HideInInspector]
     public float Score;
-
+    #endregion
 
     // Start is called before the first frame update
     void Start()
@@ -82,6 +84,7 @@ public class GameManage : MonoBehaviour
         _move.transform.position = _move.StartPos;
         _maprig.bodyType = RigidbodyType2D.Dynamic;
         IsGameOver = false;
+        Score = 0;
         
     }
 

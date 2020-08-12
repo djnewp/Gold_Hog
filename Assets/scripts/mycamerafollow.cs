@@ -21,6 +21,6 @@ public class mycamerafollow : MonoBehaviour
 
         float camZ = transform.position.z;
         transform.position = new Vector3(charPos.x, charPos.y, camZ);
-
+        
     }
 }
