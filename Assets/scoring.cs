@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using System.Text;
 
 public class scoring : MonoBehaviour
 {
     GameManage _game;
     Text scoreboard;
+    int result = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +23,22 @@ public class scoring : MonoBehaviour
     {
         if(_game.IsGameOver == true)
         {
-            scoreboard.text = _game.Score.ToString("N1") + "m";
-
-            using (StreamWriter sw = new StreamWriter("HighScore.txt"))
+            string sContents = File.ReadAllText("HighScore.txt", Encoding.Default);
+            result = sContents.IndexOf("High Score:");
+            if (result == 0)
             {
-                sw.WriteLine("High Score:" + _game.Score);
+                scoreboard.text = _game.Score.ToString("N1") + "m";
+
+
+                using (StreamWriter sw = File.AppendText("HighScore.txt"))
+                {
+                    sw.WriteLine("High Score:" + _game.Score.ToString("N1"));
+                }
+            }
+
+            else
+            {
+                
             }
         }
     }
