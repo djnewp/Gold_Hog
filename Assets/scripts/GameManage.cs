@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class GameManage : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class GameManage : MonoBehaviour
     public GameObject _mapObj;
     public MapMovement _move;
     Animator _anim;
-    Text _text;
+    Text _gameScore;
     public Rigidbody2D _maprig;
 
     [HideInInspector]
@@ -59,7 +60,7 @@ public class GameManage : MonoBehaviour
         foreach (obstacle o in obstacleList)
         o.Init();
         _maprig = GameObject.Find("map").GetComponent<Rigidbody2D>();
-        _text = GameObject.Find("Score").GetComponent<Text>();
+        _gameScore = GameObject.Find("Score").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -68,7 +69,7 @@ public class GameManage : MonoBehaviour
         if (IsGameOver != true)
         {
             Score += Time.deltaTime * 10;
-            _text.text = (Score.ToString("N1") + "m");
+            _gameScore.text = (Score.ToString("N1") + "m");
             
         }
     }
@@ -83,7 +84,7 @@ public class GameManage : MonoBehaviour
         _maprig.bodyType = RigidbodyType2D.Dynamic;
         IsGameOver = false;
         Score = 0;
-        _text.enabled = true;
+        _gameScore.enabled = true;
         
     }
 
@@ -93,7 +94,17 @@ public class GameManage : MonoBehaviour
         _anim.SetInteger("hp", _mychar._hp);
         _uiManage.Show("ResultScreen", true);
         IsGameOver = true;
-        _text.enabled = false;
+        _gameScore.enabled = false;
+        if (File.Exists("HighScore.txt") != true)
+        {
+            File.CreateText("HighScore.txt");
+        }
+        
+        using(StreamWriter sw = new StreamWriter("HighScore.txt"))
+        {
+            sw.WriteLine("HighScore:" + Score);
+        }
+
         //게임오버 및 재시작 UI 표시하기
 
     }

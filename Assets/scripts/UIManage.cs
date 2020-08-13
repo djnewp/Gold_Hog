@@ -8,15 +8,12 @@ public class UIManage : MonoBehaviour
 {
     public GameObject[] _uiList;
     GameManage _gamem;
-    Text _score;
-    mainchar _main;
     
     // Start is called before the first frame update
     public void Init()
     {
         Show("HPGauge", true);
         _gamem = GameManage.Instance;
-        _main = mainchar.Instance;
     }
     public void HideAll()
     {
