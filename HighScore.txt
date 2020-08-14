@@ -1,2 +1,1 @@
-Name:asdf
-High Score:255.7461
+HighScore:78.48367
