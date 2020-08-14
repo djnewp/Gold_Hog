@@ -5,7 +5,7 @@ using UnityEngine;
 public class obstacleDrop : obstacle
 {
     Rigidbody2D _rigbd;
-    float waiting;
+    [SerializeField] float _gravity;
     //MapMovement _move;
 
     public override void Init()
@@ -20,7 +20,7 @@ public class obstacleDrop : obstacle
         //bodyType = RigidbodyType2D.Kinematic;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         //_rigbd.AddForce(new Vector2(_move._MoveSpeed, 0));
     }
@@ -30,9 +30,7 @@ public class obstacleDrop : obstacle
     {
         if(collision.gameObject.name == "guy")
         {
-            //_rigbd.gravityScale = 1;
-            
-            _rigbd.bodyType = RigidbodyType2D.Dynamic;
+
             
 
         }
