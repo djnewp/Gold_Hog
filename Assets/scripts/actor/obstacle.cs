@@ -8,6 +8,7 @@ public class obstacle : MonoBehaviour
     GameObject _guy;
     float pos;
     float dist = 0;
+    public bool _IsInitialized = false;
 
     public virtual void Init()
     {
@@ -16,6 +17,7 @@ public class obstacle : MonoBehaviour
             _guy = pl;
         else Debug.LogError("_guy is null");
         pos = gameObject.transform.position.x;
+        _IsInitialized = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

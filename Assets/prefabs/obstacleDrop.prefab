@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 10
+  _gravity: 9.8
 --- !u!1 &8376015449057341983
 GameObject:
   m_ObjectHideFlags: 0
