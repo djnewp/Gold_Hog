@@ -103,6 +103,7 @@
     <Compile Include="Assets\scripts\UIManage.cs" />
     <Compile Include="Assets\scripts\actor\NPC.cs" />
     <Compile Include="Assets\scripts\actor\Tileanim.cs" />
+    <Compile Include="Assets\scripts\actor\Turrain.cs" />
     <Compile Include="Assets\scripts\actor\actor.cs" />
     <Compile Include="Assets\scripts\actor\character.cs" />
     <Compile Include="Assets\scripts\actor\item.cs" />
