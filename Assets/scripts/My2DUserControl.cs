@@ -28,11 +28,6 @@ public class My2DUserControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            
-            _myChar2D.Jump();
-        }
 
         Vector2 vel = _rigid.velocity;
         
@@ -44,6 +39,14 @@ public class My2DUserControl : MonoBehaviour
 
         
         _rigid.velocity = new Vector2(newVelX, vel.y);
+
+        if (Input.GetKeyDown(KeyCode.Space) && _myChar2D._hp > 0)
+        {
+
+            _myChar2D.Jump();
+        }
+
+        else return;
 
     }
 
