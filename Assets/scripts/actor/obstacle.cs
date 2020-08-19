@@ -9,8 +9,6 @@ public class obstacle : Turrain
 
     public virtual void Init()
     {
-        
-        pos = gameObject.transform.position.x;
         _IsInitialized = true;
     }
 
@@ -32,10 +30,13 @@ public class obstacle : Turrain
     {
         if (gameObject.transform.position.x <= -14)
         {
-            if(gameObject.name != "Starting")
+            GameObject g = transform.parent.gameObject;
+
+            if (g.name == "map")
             {
                 Gone();
             }
+
         }
     }
 

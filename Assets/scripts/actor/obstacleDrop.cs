@@ -10,14 +10,16 @@ public class obstacleDrop : obstacle
 
     public override void Init()
     {
-        base.Init();
+        
 
         _rigbd = gameObject.GetComponent<Rigidbody2D>();
         _rigbd.bodyType = RigidbodyType2D.Kinematic;
         _move = GameObject.Find("map").GetComponent<MapMovement>();
         //.gravityScale = 0;
         //bodyType = RigidbodyType2D.Kinematic;
+        base.Init();
     }
+
 
     private void Update()
     {
