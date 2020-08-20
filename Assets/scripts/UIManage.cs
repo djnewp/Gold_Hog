@@ -17,6 +17,7 @@ public class UIManage : MonoBehaviour
     }
     public void HideAll()
     {
+        
         GameObject ui;
 
         for (int 회 = 0; 회 < _uiList.Length; 회++)
@@ -58,5 +59,11 @@ public class UIManage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+    }
+
+    public void ToMenu()
+    {
+       SceneManager.LoadScene("menuscreen");
+        
     }
 }
