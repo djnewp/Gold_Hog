@@ -11,6 +11,7 @@ public class scoring : MonoBehaviour
     GameManage _game;
     Text scoreboard;
     int result = 0;
+    float HIGH_SCORE = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,9 @@ public class scoring : MonoBehaviour
     {
         if(_game.IsGameOver == true)
         {
+
+            
+
             string sContents = File.ReadAllText("HighScore.txt", Encoding.Default);
             result = sContents.IndexOf("High Score:");
             if (result == 0)
