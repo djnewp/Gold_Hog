@@ -31,8 +31,9 @@ public class obstacleDrop : obstacle
     {
         if(collision.gameObject.name == "guy")
         {
+            this.transform.Translate(0, transform.position.y * _gravity * Time.deltaTime, 0,Space.World);
 
-            
+
 
         }
     }
