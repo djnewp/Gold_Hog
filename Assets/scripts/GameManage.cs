@@ -108,4 +108,9 @@ public class GameManage : MonoBehaviour
         //게임오버 및 재시작 UI 표시하기
 
     }
+
+    public void HpRegain()
+    {
+        _mychar._hp = _mychar._maxhp;
+    }
 }

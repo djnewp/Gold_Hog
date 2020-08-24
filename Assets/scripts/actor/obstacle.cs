@@ -42,6 +42,7 @@ public class obstacle : Turrain
 
     protected override void Gone()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        _IsInitialized = false;
     }
 }
