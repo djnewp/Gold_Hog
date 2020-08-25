@@ -27,4 +27,9 @@ public class ui_base : MonoBehaviour
         
 
     }
+
+    public virtual void Show(bool show)
+    {
+        gameObject.SetActive(show);
+    }
 }

@@ -16,17 +16,17 @@ public class scoring : MonoBehaviour
     private const string HIGH_SCORE = "old_high_score";
     float compareScore = 0.0f;
     public Text ComparedScore;
+    public Text[] HighScores;
 
+    public UserData _userData;
+    public naming _name;
 
     // Start is called before the first frame update
     void Start()
     {
         _game = GameManage.Instance;
         scoreboard = GetComponent<Text>();
-        if (!PlayerPrefs.HasKey(HIGH_SCORE))
-        {
-            highScore = PlayerPrefs.GetFloat(HIGH_SCORE, compareScore);
-        }
+        
     }
 
     // Update is called once per frame
@@ -36,24 +36,21 @@ public class scoring : MonoBehaviour
         {
             scoreboard.text = _game.Score.ToString("N1") + "m";
 
-            newScore = _game.Score;
-            if (PlayerPrefs.HasKey(HIGH_SCORE))
+            _userData.SaveScore(_game.Score);
+            
+           string[] HighScoreBoard = _userData.GetScoreList();
+            string userid = PlayerPrefs.GetString("username");
+            for(int i = 0;i<3;i++)
             {
-                highScore = PlayerPrefs.GetFloat(HIGH_SCORE);
-                compareScore = Mathf.Max(newScore, highScore);
-                if (newScore > highScore)
+                if (i < HighScoreBoard.Length)
+                    HighScores[i].text = userid + HighScoreBoard[i];
+
+                else
                 {
-                    PlayerPrefs.SetFloat(HIGH_SCORE, newScore);
+                    HighScores[i].enabled = false;
                 }
             }
-
-            else
-                PlayerPrefs.SetFloat(HIGH_SCORE, newScore);
-
             
-
-            ComparedScore.text = compareScore.ToString("N1") + "m";
-                
         }
     }
 }

@@ -30,9 +30,6 @@ public class naming : MonoBehaviour
     public void UserNameConfirmed(string temp)
     {
         Debug.Log("입력 끝" + temp);
-        using(StreamWriter sw = new StreamWriter("HighScore.txt"))
-        {
-            sw.WriteLine("Name:" + _userID);
-        }
+        PlayerPrefs.SetString("username", temp);
     }
 }

@@ -31,10 +31,10 @@ public class mainchar : character
     {
         get
         {
-            if(null==_instance)
+            if(null == _instance)
             {
                 _instance = FindObjectOfType(typeof(mainchar)) as mainchar;
-                if(null ==_instance)
+                if(null == _instance)
                 {
                     Debug.LogError("mainchar 가져오기 실패");
                 }
