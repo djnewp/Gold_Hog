@@ -44,6 +44,8 @@ public class GameManage : MonoBehaviour
     public float Score;
     #endregion
 
+    public scoring _score;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -85,7 +87,7 @@ public class GameManage : MonoBehaviour
         IsGameOver = false;
         Score = 0;
         _gameScore.enabled = true;
-        
+        _score.IsRecorded = false;
     }
 
     public void GameOver()
