@@ -6,7 +6,6 @@ public class obstacleDrop : obstacle
 {
     Rigidbody2D _rigbd;
     [SerializeField] float _gravity = 9.8f;
-    MapMovement _move;
 
     //private float _speedY = 0.0f;
 
