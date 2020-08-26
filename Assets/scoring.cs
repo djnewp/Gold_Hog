@@ -16,11 +16,13 @@ public class scoring : MonoBehaviour
     private const string HIGH_SCORE = "old_high_score";
     float compareScore = 0.0f;
     public Text ComparedScore;
+<<<<<<< HEAD:Assets/scripts/scoring.cs
     public Text[] HighScores;
     
     [HideInInspector]
     public bool IsRecorded = false;
-
+=======
+>>>>>>> parent of 2b241fe... asdf:Assets/scoring.cs
 
 
     // Start is called before the first frame update
@@ -41,6 +43,7 @@ public class scoring : MonoBehaviour
         {
             scoreboard.text = _game.Score.ToString("N1") + "m";
 
+<<<<<<< HEAD:Assets/scripts/scoring.cs
             if (IsRecorded == false)
 
             {
@@ -64,7 +67,7 @@ public class scoring : MonoBehaviour
 
             IsRecorded = true;
 
-
+=======
             newScore = _game.Score;
             if (PlayerPrefs.HasKey(HIGH_SCORE))
             {
@@ -83,6 +86,7 @@ public class scoring : MonoBehaviour
 
             ComparedScore.text = compareScore.ToString("N1") + "m";
                 
+>>>>>>> parent of 2b241fe... asdf:Assets/scoring.cs
         }
     }
 }
