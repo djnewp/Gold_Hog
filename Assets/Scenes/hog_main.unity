@@ -2823,8 +2823,8 @@ GameObject:
   - component: {fileID: 823613808}
   - component: {fileID: 823613812}
   - component: {fileID: 823613811}
-  - component: {fileID: 823613810}
   - component: {fileID: 823613809}
+  - component: {fileID: 823613810}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -8127,8 +8127,8 @@ GameObject:
   - component: {fileID: 2077613840}
   - component: {fileID: 2077613844}
   - component: {fileID: 2077613843}
-  - component: {fileID: 2077613842}
   - component: {fileID: 2077613841}
+  - component: {fileID: 2077613842}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged

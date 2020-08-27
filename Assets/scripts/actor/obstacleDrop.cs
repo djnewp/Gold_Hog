@@ -17,7 +17,6 @@ public class obstacleDrop : obstacle
 
         _rigbd = gameObject.GetComponent<Rigidbody2D>();
         _rigbd.bodyType = RigidbodyType2D.Kinematic;
-        _move = GameObject.Find("map").GetComponent<MapMovement>();
 
         base.Init();
 
