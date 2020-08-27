@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class naming : MonoBehaviour
 {
-    string _userID = "";
+    public string _userID = "";
     InputField _inputField;
+    public scoring _scoring;
 
     // Update is called once per frame
 
@@ -30,9 +31,16 @@ public class naming : MonoBehaviour
     public void UserNameConfirmed(string temp)
     {
         Debug.Log("입력 끝" + temp);
-        using(StreamWriter sw = new StreamWriter("HighScore.txt"))
-        {
-            sw.WriteLine("Name:" + _userID);
-        }
+        _userID = temp;
     }
+
+    public void OnButtonClick()
+    {
+        using (StreamWriter sw = new StreamWriter("HighScore.txt", true))
+        {
+            sw.WriteLine(_userID + "," + _scoring.newScore);
+        }
+        UIManage.Instance.Show("HighScore", true);
+    }
+
 }

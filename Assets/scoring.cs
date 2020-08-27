@@ -10,12 +10,10 @@ public class scoring : MonoBehaviour
 {
     GameManage _game;
     Text scoreboard;
-    int result = 0;
-    float highScore = 0;
-    float newScore = 0;
+    [HideInInspector]
+    public float newScore = 0;
+
     private const string HIGH_SCORE = "old_high_score";
-    float compareScore = 0.0f;
-    public Text ComparedScore;
 
 
     // Start is called before the first frame update
@@ -23,37 +21,20 @@ public class scoring : MonoBehaviour
     {
         _game = GameManage.Instance;
         scoreboard = GetComponent<Text>();
-        if (!PlayerPrefs.HasKey(HIGH_SCORE))
-        {
-            highScore = PlayerPrefs.GetFloat(HIGH_SCORE, compareScore);
-        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(_game.IsGameOver == true)
+        // Update is called once per frame
+  void Update()
+   {
+     if (_game.IsGameOver == true)
         {
-            scoreboard.text = _game.Score.ToString("N1") + "m";
 
-            newScore = _game.Score;
-            if (PlayerPrefs.HasKey(HIGH_SCORE))
-            {
-                highScore = PlayerPrefs.GetFloat(HIGH_SCORE);
-                compareScore = Mathf.Max(newScore, highScore);
-                if (newScore > highScore)
-                {
-                    PlayerPrefs.SetFloat(HIGH_SCORE, newScore);
-                }
-            }
 
-            else
-                PlayerPrefs.SetFloat(HIGH_SCORE, newScore);
+         scoreboard.text = _game.Score.ToString("N1") + "m";
 
-            
 
-            ComparedScore.text = compareScore.ToString("N1") + "m";
-                
         }
-    }
+   }
+    
 }
