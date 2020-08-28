@@ -36,11 +36,16 @@ public class naming : MonoBehaviour
 
     public void OnButtonClick()
     {
-        using (StreamWriter sw = new StreamWriter("HighScore.txt", true))
+        if (_userID != null)
         {
-            sw.WriteLine(_userID + "," + _scoring.newScore);
-        }
-        UIManage.Instance.Show("HighScore", true);
-    }
+            using (StreamWriter sw = new StreamWriter("HighScore.txt", true))
+            {
+                sw.WriteLine(_userID + "," + _scoring.newScore);
+            }
+            UIManage.Instance.Show("HighScore", true);
 
+        }
+
+        else { Debug.LogError("유저 아이디 가져올 수 없음"); }
+    }
 }

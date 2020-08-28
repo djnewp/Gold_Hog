@@ -60,7 +60,7 @@ public class GameManage : MonoBehaviour
         foreach (obstacle o in obstacleList)
         o.Init();
         _maprig = GameObject.Find("map").GetComponent<Rigidbody2D>();
-        _gameScore = GameObject.Find("Score").GetComponent<Text>();
+        _gameScore = GameObject.Find("InGameScore").GetComponent<Text>();
     }
 
     // Update is called once per frame

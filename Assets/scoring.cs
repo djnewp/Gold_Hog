@@ -13,8 +13,6 @@ public class scoring : MonoBehaviour
     [HideInInspector]
     public float newScore = 0;
 
-    private const string HIGH_SCORE = "old_high_score";
-
 
     // Start is called before the first frame update
     void Start()
