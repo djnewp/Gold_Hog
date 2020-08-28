@@ -571,7 +571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &108244438
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6586,7 +6586,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _userID: 
-  _scoring: {fileID: 0}
+  _scoring: {fileID: 463981621}
+  _rank: {fileID: 108244439}
 --- !u!114 &1668798744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6642,7 +6643,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1668798743}
         m_MethodName: UserNameConfirmed
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6656,7 +6657,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1668798743}
         m_MethodName: UserNameHasWritten
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

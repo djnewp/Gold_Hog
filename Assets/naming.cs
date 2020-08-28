@@ -9,6 +9,7 @@ public class naming : MonoBehaviour
     public string _userID = null;
     InputField _inputField;
     public scoring _scoring;
+    public ui_ranking _rank;
 
     // Update is called once per frame
 
@@ -18,7 +19,7 @@ public class naming : MonoBehaviour
         _inputField = GetComponent<InputField>();
     }
 
-    public void UserNameHasWritten(string userid)
+    public void UserNameHasWritten()
     {
         Debug.Log("IME:" + Input.imeCompositionMode.ToString());
 
@@ -28,8 +29,10 @@ public class naming : MonoBehaviour
         _userID = temp;
     }
 
-    public void UserNameConfirmed(string temp)
+    public void UserNameConfirmed()
     {
+        string temp = _inputField.text;
+
         Debug.Log("입력 끝" + temp);
         _userID = temp;
     }
@@ -42,7 +45,7 @@ public class naming : MonoBehaviour
             {
                 sw.WriteLine(_userID + "," + _scoring.newScore);
             }
-            UIManage.Instance.Show("Ranking", true);
+            _rank.Show(true);
 
         }
 

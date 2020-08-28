@@ -30,6 +30,6 @@ public class ui_base : MonoBehaviour
 
     public virtual void Show(bool Show)
     {
-
+        UIManage.Instance.Show("Ranking", true);
     }
 }
