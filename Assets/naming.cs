@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class naming : MonoBehaviour
 {
-    public string _userID = "";
+    public string _userID = null;
     InputField _inputField;
     public scoring _scoring;
 
