@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using System;
 
 public class ui_ranking : ui_base
 {
@@ -43,6 +44,8 @@ public class ui_ranking : ui_base
 
         strList = b.Split(delimiter);
         string scoreB = strList[1];
+        
+
 
 
         //return scoreA.CompareTo(scoreB); //오름차순 정렬

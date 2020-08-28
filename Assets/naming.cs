@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
 public class naming : MonoBehaviour
@@ -43,7 +44,7 @@ public class naming : MonoBehaviour
         {
             using (StreamWriter sw = new StreamWriter("HighScore.txt", true))
             {
-                sw.WriteLine(_userID + "," + _scoring.newScore);
+                sw.WriteLine(_userID + "," + _scoring.newScore.ToString("N1") + "m");
             }
             _rank.Show(true);
 
