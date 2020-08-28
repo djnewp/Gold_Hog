@@ -30,7 +30,7 @@ public class scoring : MonoBehaviour
 
 
          scoreboard.text = _game.Score.ToString("N1") + "m";
-
+         newScore = _game.Score;
 
         }
    }

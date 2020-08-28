@@ -42,7 +42,7 @@ public class naming : MonoBehaviour
             {
                 sw.WriteLine(_userID + "," + _scoring.newScore);
             }
-            UIManage.Instance.Show("HighScore", true);
+            UIManage.Instance.Show("Ranking", true);
 
         }
 

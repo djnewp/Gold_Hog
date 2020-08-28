@@ -95,16 +95,7 @@ public class GameManage : MonoBehaviour
         _uiManage.Show("ResultScreen", true);
         IsGameOver = true;
         _gameScore.enabled = false;
-        if (File.Exists("HighScore.txt") != true)
-        {
-            File.CreateText("HighScore.txt");
-        }
-        
-        using(StreamWriter sw = new StreamWriter("HighScore.txt"))
-        {
-            sw.WriteLine("HighScore:" + Score);
-        }
-
+       
         //게임오버 및 재시작 UI 표시하기
 
     }
