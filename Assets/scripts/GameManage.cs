@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using System.Runtime.InteropServices;
 
 public class GameManage : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class GameManage : MonoBehaviour
     Animator _anim;
     Text _gameScore;
     public Rigidbody2D _maprig;
+    public naming _name;
 
     [HideInInspector]
     public static GameManage _instance;
@@ -85,6 +87,8 @@ public class GameManage : MonoBehaviour
         IsGameOver = false;
         Score = 0;
         _gameScore.enabled = true;
+        _name.IsNameWritten = false;
+        
         
     }
 

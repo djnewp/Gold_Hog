@@ -8,6 +8,7 @@ using System;
 public class ui_ranking : ui_base
 {
     public Text[] _scoreTextList;
+    public naming _name;
 
     public string[] GetScoreList()
     {
@@ -37,37 +38,49 @@ public class ui_ranking : ui_base
         // b 08-25 11:36, 533
 
         string[] strList;
-        char[] delimiter = { ' ', ',' };
+        char[] delimiter = { ' ', ','};
 
         strList = a.Split(delimiter);
         string scoreA = strList[1];
 
         strList = b.Split(delimiter);
         string scoreB = strList[1];
-        
+
+        float scoreA_number = (float)Convert.ToDouble(scoreA);
+        float scoreB_number = (float)Convert.ToDouble(scoreB);
 
 
 
         //return scoreA.CompareTo(scoreB); //오름차순 정렬
 
-        return scoreB.CompareTo(scoreA); // 내림차순 정렬
+        //return scoreB.CompareTo(scoreA); // 내림차순 정렬
+
+        return (int)(scoreA_number - scoreB_number);
     }
 
     public override void Show(bool Show)
     {
-        base.Show(Show);
         string[] scoreList = GetScoreList();
+        base.Show(Show);        
         for (int i = 0; i < 5; i++)
         {
             if (i < scoreList.Length)
             {                
-                _scoreTextList[i].text = scoreList[i];
+                _scoreTextList[i].text = scoreList[i]+"m";
             }
             else
             {
                 _scoreTextList[i].enabled = false;
             }
 
+        }
+    }
+
+    private void Update()
+    {
+        if(_name.IsNameWritten)
+        {
+            Show(true);
         }
     }
 }
