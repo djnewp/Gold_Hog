@@ -61,6 +61,7 @@ public class ui_ranking : ui_base
         {
             if (i < scoreList.Length)
             {
+                
                 _scoreTextList[i].text = scoreList[i];
             }
             else
