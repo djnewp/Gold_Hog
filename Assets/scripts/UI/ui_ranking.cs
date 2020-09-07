@@ -60,8 +60,7 @@ public class ui_ranking : ui_base
         for (int i = 0; i < 5; i++)
         {
             if (i < scoreList.Length)
-            {
-                
+            {                
                 _scoreTextList[i].text = scoreList[i];
             }
             else
