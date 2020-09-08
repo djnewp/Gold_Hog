@@ -48,7 +48,7 @@ public class naming : MonoBehaviour
                 sw.WriteLine(_userID + "," + _scoring.newScore.ToString("N1"));
             }
 
-            IsNameWritten = true;
+            _rank.Show(true);
             
         }
 
