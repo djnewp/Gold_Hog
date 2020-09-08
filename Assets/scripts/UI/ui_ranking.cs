@@ -55,7 +55,7 @@ public class ui_ranking : ui_base
 
         //return scoreB.CompareTo(scoreA); // 내림차순 정렬
 
-        return (int)(scoreA_number - scoreB_number);
+        return (int)(scoreB_number - scoreA_number);
     }
 
     public override void Show(bool Show)
@@ -76,11 +76,6 @@ public class ui_ranking : ui_base
         }
     }
 
-    private void Update()
-    {
-        if(_name.IsNameWritten)
-        {
-            Show(true);
-        }
-    }
+ 
+ 
 }

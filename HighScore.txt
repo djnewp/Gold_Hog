@@ -1,1 +1,10 @@
-HighScore:143.3365
+asdf,75.6
+zzz,118.8
+bcd,72.4
+asdfg,78.3
+qwer,198.6
+asdfzxcv,112.1
+asdfzxcv,81.3
+zzzz,79.7
+zxcvbn,81.9
+qwertyuu,98.5
