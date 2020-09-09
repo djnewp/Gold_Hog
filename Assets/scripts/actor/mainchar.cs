@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq.Expressions;
+using JetBrains.Annotations;
 #if UNITY_EDITOR
 using TMPro.EditorUtilities;
 
@@ -17,9 +18,16 @@ public class mainchar : character
     public My2DUserControl _my2dcon;
     public GameObject _guy;
     public GameObject SP;
+
+    public float _backForce = -3.0f;
+    public float _moveForce = 10.0f;
+    public float _moveMax = 3.0f;
+
     CapsuleCollider2D _StdCol;
     CapsuleCollider2D _SldCol;
     Vector3 startPos;
+    obstacle Bang;
+    int dmg;
     //int jump = 0;
 
 
@@ -52,7 +60,8 @@ public class mainchar : character
             GameObject uiMger = GameObject.Find("UIMng");
             _uiM = uiMger.GetComponent<UIMng>();
         }*/
-
+        _maxhp = 100;
+        _rigid = GetComponent<Rigidbody2D>();
         _hp = _maxhp;
         _anim.SetInteger("hp", _hp);
         _my2dcon = GetComponent<My2DUserControl>();
@@ -61,6 +70,7 @@ public class mainchar : character
         _StdCol = gameObject.GetComponent<CapsuleCollider2D>();
         _SldCol = gameObject.transform.Find("SlideCollider").GetComponent<CapsuleCollider2D>();
         _GameMana = GameManage.Instance;
+        DontDestroyOnLoad(gameObject);
     }
 
     public void OnDmg(int dmg)
@@ -86,23 +96,30 @@ public class mainchar : character
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y <= -6) OnDmg(_maxhp);
+        if (_hp > 0)
 
-        if(Input.GetKeyDown(KeyCode.LeftControl))
         {
-            Slide();
-        }        
-        else if (Input.GetKeyUp(KeyCode.LeftControl))
-        {
-            _SldCol.enabled = false;
-            _StdCol.enabled = true;
-            _anim.SetBool("onslide", false);
-            _anim.SetBool("IsStanding", true);
+            //Move();
 
-        }
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            Jump();
+            if (transform.position.y <= -6) OnDmg(_maxhp);
+
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                Slide();
+            }
+            else if (Input.GetKeyUp(KeyCode.LeftControl))
+            {
+                _SldCol.enabled = false;
+                _StdCol.enabled = true;
+                _anim.SetBool("onslide", false);
+                _anim.SetBool("IsStanding", true);
+
+            }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Jump();
+
+            }
         }
 
     }
@@ -146,6 +163,28 @@ public class mainchar : character
             _GameMana.GameOver();
         }
 
+        if (collision.collider.tag == "obstacle")
+        {
+            Bang = collision.collider.GetComponent<obstacle>();
+            dmg = Bang.DmgDeal();
+            _rigid.velocity = new Vector2(_backForce, _rigid.position.y);
+            OnDmg(dmg);
+            Debug.Log("현재 체력" + _hp);
+        }
+    }
+
+    private void Move()
+    {
+        Vector2 vel = _rigid.velocity;
+
+        // x축으로의 속도가 _moveMax보다 커지지 않게 한다.
+        float newVelX = Mathf.Min(_moveMax, vel.x);
+
+        // x축으로의 속도가 -1 * _moveMax보다 작아지지 않게 한다.
+        newVelX = Mathf.Max(-1 * _moveMax, newVelX);
+
+
+        _rigid.velocity = new Vector2(newVelX, vel.y);
     }
 
 

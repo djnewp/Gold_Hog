@@ -40,25 +40,12 @@ public class My2DUserControl : MonoBehaviour
         
         _rigid.velocity = new Vector2(newVelX, vel.y);
 
-        if (Input.GetKeyDown(KeyCode.Space) && _myChar2D._hp > 0)
-        {
-
-            _myChar2D.Jump();
-        }
-
-        else return;
+        
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.tag == "obstacle")
-        {
-            Bang = collision.collider.GetComponent<obstacle>();
-            dmg = Bang.DmgDeal();
-            _rigid.velocity = new Vector2(_backForce, _rigid.position.y);
-            _myChar2D.OnDmg(dmg);
-            Debug.Log("현재 체력" + _myChar2D._hp);
-        }
+        
     }
 }
