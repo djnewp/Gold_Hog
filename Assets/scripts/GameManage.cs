@@ -58,9 +58,7 @@ public class GameManage : MonoBehaviour
         _uiManage = GameObject.Find("UIManage").GetComponent<UIManage>();
         _move.Init();
         _anim = _mychar.GetComponent<Animator>();
-        obstacle[] obstacleList = _mapObj.GetComponentsInChildren<obstacle>(true);
-        foreach (obstacle o in obstacleList)
-        o.Init();
+        ObstacleInit();
         _maprig = GameObject.Find("map").GetComponent<Rigidbody2D>();
         _gameScore = GameObject.Find("InGameScore").GetComponent<Text>();
     }
@@ -87,7 +85,8 @@ public class GameManage : MonoBehaviour
         IsGameOver = false;
         Score = 0;
         _gameScore.enabled = true;
-        _name.IsNameWritten = false;
+        ObstacleInit();
+        _name._userID = null;
         
         
     }
@@ -107,5 +106,12 @@ public class GameManage : MonoBehaviour
     public void HpRegain()
     {
         _mychar._hp = _mychar._maxhp;
+    }
+
+    private void ObstacleInit()
+    {
+        obstacle[] obstacleList = _mapObj.GetComponentsInChildren<obstacle>(true);
+        foreach (obstacle o in obstacleList)
+            o.Init();
     }
 }

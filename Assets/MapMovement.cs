@@ -29,11 +29,14 @@ public class MapMovement : MonoBehaviour
         if (mainchar.Instance._hp > 0)
         {
             if (_rigbd.bodyType == RigidbodyType2D.Static)
-                _rigbd.bodyType = RigidbodyType2D.Kinematic;
+                _rigbd.bodyType = RigidbodyType2D.Dynamic;
+            
             _rigbd.AddForce(new Vector2(_MoveSpeed, 0));
+            
             Vector2 vel = _rigbd.velocity;
-            float newVelX = Mathf.Max(_MoveSpeed, vel.x);
-            newVelX = Mathf.Max(_MoveMax, newVelX);
+
+            float newVelX = Mathf.Max(_MoveMax, vel.x);
+            
             _rigbd.velocity = new Vector2(newVelX, vel.y);
         }
 

@@ -9,15 +9,17 @@ public class obstacle : Turrain
 
     public virtual void Init()
     {
-        _IsInitialized = true;
+        Vector3 StartPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y);
+        gameObject.SetActive(true);
+        gameObject.transform.position = StartPos;
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.name == "guy" || collision.collider.name == "GameOverLine")
         {
-            Destroy(gameObject);
-            gameObject.SetActive(false);
+            Gone();
         }
     }
 
