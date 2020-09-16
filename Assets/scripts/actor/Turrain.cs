@@ -5,4 +5,6 @@ using UnityEngine;
 public abstract class Turrain : MonoBehaviour
 {
     protected abstract void Gone();
+
+    
 }
