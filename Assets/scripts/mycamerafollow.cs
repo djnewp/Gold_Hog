@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class mycamerafollow : MonoBehaviour
 {
+    public float _offset = 0.75f;
     public Transform _target;
     GameObject _pc;
 
@@ -20,7 +21,7 @@ public class mycamerafollow : MonoBehaviour
         Vector3 charPos = _target.position;
 
         float camZ = transform.position.z;
-        transform.position = new Vector3(charPos.x, charPos.y, camZ);
+        transform.position = new Vector3(charPos.x + _offset, charPos.y, camZ);
         
     }
 }

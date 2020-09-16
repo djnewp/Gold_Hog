@@ -277,8 +277,8 @@ MonoBehaviour:
   _maxhp: 100
   _rigid: {fileID: 7643305877787529238}
   _anim: {fileID: 7643305877787529244}
-  _jumpForce: 150
-  _jumpMax: 20
+  _jumpForce: 200
+  _jumpMax: 120
   _uiM: {fileID: 0}
   _GameMana: {fileID: 0}
   _my2dcon: {fileID: 0}

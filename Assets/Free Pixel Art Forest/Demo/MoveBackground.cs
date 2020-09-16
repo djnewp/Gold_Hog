@@ -31,7 +31,7 @@ public class MoveBackground : MonoBehaviour {
 		{
 			speed = _SpdDefalt;
 			x = transform.position.x;
-			x += speed * Time.deltaTime;
+			x += speed * Time.deltaTime * 0.2f;
 			transform.position = new Vector3(x, transform.position.y, transform.position.z);
 
 
