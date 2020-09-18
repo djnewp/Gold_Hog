@@ -6,11 +6,12 @@ using System;
 public class ObstacleGenerator : MonoBehaviour
 {
     public GameObject[] _TerrainPrefab;
-    
+
+    private GameObject _prevLandPart = null;
 
     public void Init()
     {
-        
+        _prevLandPart = _TerrainPrefab[0];
     }
     // Update is called once per frame
     void Update()
@@ -25,20 +26,25 @@ public class ObstacleGenerator : MonoBehaviour
         if (_TerrainPrefab != null)
         {
             Transform parent = GameObject.Find("map").GetComponent<Transform>();
-            GameObject child = Instantiate(_TerrainPrefab[0]);
-            child.transform.parent = parent;
-            child.transform.position = new Vector3(child.transform.position.x,
-                                                   gameObject.transform.position.y
-                                                    , child.transform.position.z);
-            child.name = "Blocks";
+            GameObject prefab = _TerrainPrefab[0];
+            GameObject newLand = Instantiate(prefab);
+            newLand.transform.parent = parent;
+
+            Vector3 prevPos = _prevLandPart.transform.position;
+
+            float offset = UnityEngine.Random.Range(2.0f, 4.0f);
+
+            newLand.transform.position = new Vector3(prevPos.x + Common.LAND_PART_WIDTH + offset, prevPos.y, prevPos.z);
+
+            _prevLandPart = newLand;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
  
-            
-            NewLand();
+        if( collision.gameObject.tag == "Player")
+           NewLand();
        
     }
 

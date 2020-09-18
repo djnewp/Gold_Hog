@@ -61,6 +61,9 @@ public class GameManage : MonoBehaviour
         ObstacleInit();
         _maprig = GameObject.Find("map").GetComponent<Rigidbody2D>();
         _gameScore = GameObject.Find("InGameScore").GetComponent<Text>();
+
+        ObstacleGenerator og = _move.GetComponent<ObstacleGenerator>();
+        og.Init();
     }
 
     // Update is called once per frame
