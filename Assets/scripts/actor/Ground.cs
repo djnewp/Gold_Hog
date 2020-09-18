@@ -7,7 +7,7 @@ public class Ground : Turrain
     // Update is called once per frame
     void Update()
     {
-        if(gameObject.transform.position.x <= -14)
+        if(gameObject.transform.position.x <= -Common.LAND_PART_WIDTH*2)
         {
             GameObject g = transform.parent.gameObject;
 

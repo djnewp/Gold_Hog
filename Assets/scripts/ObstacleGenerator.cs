@@ -26,9 +26,11 @@ public class ObstacleGenerator : MonoBehaviour
         if (_TerrainPrefab != null)
         {
             Transform parent = GameObject.Find("map").GetComponent<Transform>();
-            GameObject prefab = _TerrainPrefab[0];
+            int random = UnityEngine.Random.Range(0, 2);
+            GameObject prefab = _TerrainPrefab[random];
             GameObject newLand = Instantiate(prefab);
             newLand.transform.parent = parent;
+            newLand.AddComponent<Ground>();
 
             Vector3 prevPos = _prevLandPart.transform.position;
 
@@ -37,6 +39,11 @@ public class ObstacleGenerator : MonoBehaviour
             newLand.transform.position = new Vector3(prevPos.x + Common.LAND_PART_WIDTH + offset, prevPos.y, prevPos.z);
 
             _prevLandPart = newLand;
+        }
+
+        else
+        {
+            Debug.LogError("프리팹 미부착");
         }
     }
 
