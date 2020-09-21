@@ -89,7 +89,6 @@ public class GameManage : MonoBehaviour
         Score = 0;
         _gameScore.enabled = true;
         ObstacleInit();
-        _name._userID = null;
         
         
     }

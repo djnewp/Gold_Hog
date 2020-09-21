@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Unity.Mathematics;
 
 public class ObstacleGenerator : MonoBehaviour
 {
@@ -26,11 +27,14 @@ public class ObstacleGenerator : MonoBehaviour
         if (_TerrainPrefab != null)
         {
             Transform parent = GameObject.Find("map").GetComponent<Transform>();
-            int random = UnityEngine.Random.Range(0, 2);
+            int random = UnityEngine.Random.Range(0, 4);
             GameObject prefab = _TerrainPrefab[random];
             GameObject newLand = Instantiate(prefab);
             newLand.transform.parent = parent;
             newLand.AddComponent<Ground>();
+            
+
+           
 
             Vector3 prevPos = _prevLandPart.transform.position;
 

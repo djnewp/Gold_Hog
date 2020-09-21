@@ -19,13 +19,10 @@ public class mainchar : character
     public GameObject _guy;
     public GameObject SP;
 
-    public float _backForce = -3.0f;
-    public float _moveForce = 10.0f;
-    public float _moveMax = 3.0f;
+    public float _backForce = -1.5f;
 
     CapsuleCollider2D _StdCol;
     CapsuleCollider2D _SldCol;
-    Vector3 startPos;
     obstacle Bang;
     int dmg;
     //int jump = 0;
@@ -65,8 +62,6 @@ public class mainchar : character
         _hp = _maxhp;
         _anim.SetInteger("hp", _hp);
         _my2dcon = GetComponent<My2DUserControl>();
-        SP = GameObject.Find("StartPos");
-        startPos = new Vector3(SP.transform.position.x, SP.transform.position.y, SP.transform.position.z);
         _StdCol = gameObject.GetComponent<CapsuleCollider2D>();
         _SldCol = gameObject.transform.Find("SlideCollider").GetComponent<CapsuleCollider2D>();
         _GameMana = GameManage.Instance;
@@ -171,22 +166,5 @@ public class mainchar : character
             OnDmg(dmg);
             Debug.Log("현재 체력" + _hp);
         }
-    }
-
-    private void Move()
-    {
-        Vector2 vel = _rigid.velocity;
-
-        // x축으로의 속도가 _moveMax보다 커지지 않게 한다.
-        float newVelX = Mathf.Min(_moveMax, vel.x);
-
-        // x축으로의 속도가 -1 * _moveMax보다 작아지지 않게 한다.
-        newVelX = Mathf.Max(-1 * _moveMax, newVelX);
-
-
-        _rigid.velocity = new Vector2(newVelX, vel.y);
-    }
-
-
-    
+    }    
 }

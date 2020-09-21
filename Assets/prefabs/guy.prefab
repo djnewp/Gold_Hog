@@ -284,7 +284,7 @@ MonoBehaviour:
   _my2dcon: {fileID: 0}
   _guy: {fileID: 7643305877787529236}
   SP: {fileID: 0}
-  _backForce: -3
+  _backForce: -1.5
   _moveForce: 10
   _moveMax: 3
   _jumpSnd: {fileID: 7183622031483568777}
