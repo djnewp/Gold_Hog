@@ -9,6 +9,7 @@ public class ObstacleGenerator : MonoBehaviour
     public GameObject[] _TerrainPrefab;
 
     private GameObject _prevLandPart = null;
+    public Vector3 prevPos;
 
     public void Init()
     {
@@ -31,17 +32,11 @@ public class ObstacleGenerator : MonoBehaviour
             GameObject prefab = _TerrainPrefab[random];
             GameObject newLand = Instantiate(prefab);
             newLand.transform.parent = parent;
-            newLand.AddComponent<Ground>();
-            
+            newLand.AddComponent<Ground>();                       
 
-           
-
-            Vector3 prevPos = _prevLandPart.transform.position;
-
+            prevPos = _prevLandPart.transform.position;
             float offset = UnityEngine.Random.Range(2.0f, 4.0f);
-
             newLand.transform.position = new Vector3(prevPos.x + Common.LAND_PART_WIDTH + offset, prevPos.y, prevPos.z);
-
             _prevLandPart = newLand;
         }
 

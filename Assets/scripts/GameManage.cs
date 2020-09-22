@@ -20,6 +20,7 @@ public class GameManage : MonoBehaviour
     Text _gameScore;
     public Rigidbody2D _maprig;
     public naming _name;
+    ObstacleGenerator _og;
 
     [HideInInspector]
     public static GameManage _instance;
@@ -62,8 +63,8 @@ public class GameManage : MonoBehaviour
         _maprig = GameObject.Find("map").GetComponent<Rigidbody2D>();
         _gameScore = GameObject.Find("InGameScore").GetComponent<Text>();
 
-        ObstacleGenerator og = _move.GetComponent<ObstacleGenerator>();
-        og.Init();
+        _og = _move.GetComponent<ObstacleGenerator>();
+        _og.Init();
     }
 
     // Update is called once per frame
@@ -89,7 +90,7 @@ public class GameManage : MonoBehaviour
         Score = 0;
         _gameScore.enabled = true;
         ObstacleInit();
-        
+        _og.prevPos = _og.transform.position;
         
     }
 

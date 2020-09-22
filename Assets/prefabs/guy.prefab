@@ -284,9 +284,8 @@ MonoBehaviour:
   _my2dcon: {fileID: 0}
   _guy: {fileID: 7643305877787529236}
   SP: {fileID: 0}
-  _backForce: -1.5
-  _moveForce: 10
-  _moveMax: 3
+  _backForce: -0.51
+  jump: 0
   _jumpSnd: {fileID: 7183622031483568777}
 --- !u!50 &7643305877787529238
 Rigidbody2D:
