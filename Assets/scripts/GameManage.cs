@@ -90,7 +90,6 @@ public class GameManage : MonoBehaviour
         Score = 0;
         _gameScore.enabled = true;
         ObstacleInit();
-        _og.prevPos = _og.transform.position;
         
     }
 

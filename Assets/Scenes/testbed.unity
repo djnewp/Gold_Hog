@@ -4282,7 +4282,13 @@ MonoBehaviour:
   - {fileID: 5451840231963184746}
   - {fileID: 6298425637013232888, guid: 83dc77c67f77a3842b39eeb705cecf32, type: 3}
   - {fileID: 1781624291250717131, guid: a808271ca37db8c4ebd11bddecc5eaed, type: 3}
+  - {fileID: 1781624291250717131, guid: 90ecb1eb12325bc40ac69b48e3534488, type: 3}
+  - {fileID: 1781624291250717131, guid: f4d91046da732884399618462d50f2ea, type: 3}
   - {fileID: 6298425637013232888, guid: 8f2b45579a39e59408006177f58ba290, type: 3}
+  - {fileID: 1781624291250717131, guid: 22ca15e2007981340b51a21e863357d3, type: 3}
+  - {fileID: 1781624291250717131, guid: f2c4ef355192c5a4fa2767e3f1761438, type: 3}
+  _prevLandPart: {fileID: 0}
+  prevPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1904533682
 GameObject:
   m_ObjectHideFlags: 0

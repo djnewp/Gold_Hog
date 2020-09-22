@@ -8,7 +8,7 @@ public class ObstacleGenerator : MonoBehaviour
 {
     public GameObject[] _TerrainPrefab;
 
-    private GameObject _prevLandPart = null;
+    public GameObject _prevLandPart = null;
     public Vector3 prevPos;
 
     public void Init()
@@ -28,7 +28,7 @@ public class ObstacleGenerator : MonoBehaviour
         if (_TerrainPrefab != null)
         {
             Transform parent = GameObject.Find("map").GetComponent<Transform>();
-            int random = UnityEngine.Random.Range(0, 9);
+            int random = UnityEngine.Random.Range(0, 8);
             GameObject prefab = _TerrainPrefab[random];
             GameObject newLand = Instantiate(prefab);
             newLand.transform.parent = parent;
