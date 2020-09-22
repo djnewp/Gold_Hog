@@ -25,7 +25,8 @@ public class mainchar : character
     CapsuleCollider2D _SldCol;
     obstacle Bang;
     int dmg;
-    //int jump = 0;
+    
+    public int jump = 0;
 
 
     public AudioSource _jumpSnd;
@@ -121,9 +122,9 @@ public class mainchar : character
 
     public void Jump()
     {
-        //if (jump < 3)
+        if (jump < 2)
         {
-            //jump++;
+
             _anim.SetBool("keyJump", true);
             _rigid.AddForce(new Vector2(0.0f, _jumpForce));
 
@@ -131,9 +132,11 @@ public class mainchar : character
             float limit = Mathf.Min(_jumpMax, vel.y);
             _rigid.velocity = new Vector2(vel.x, limit);
             if (_jumpSnd) _jumpSnd.Play();
-
+            jump++;
         }
-       // else return;
+
+        else return;
+
     }
 
 
@@ -150,7 +153,7 @@ public class mainchar : character
         if (collision.gameObject.tag == "ground")
         {
             _anim.SetBool("keyJump", false);
-            //jump = 0;
+            jump = 0;
         }
 
         if(collision.gameObject.name == "GameOverLine")

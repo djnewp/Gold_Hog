@@ -5618,6 +5618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5098838636576825489}
   - component: {fileID: 8575931217510089953}
+  - component: {fileID: 3833032566736260972}
   m_Layer: 0
   m_Name: LandPartA
   m_TagString: ground
@@ -5668,6 +5669,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.4, y: 0.57}
   m_EdgeRadius: 0
+--- !u!114 &3833032566736260972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6298425637013232888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8719b3256aa96b545864b7a4f663db12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6413537340733371429
 GameObject:
   m_ObjectHideFlags: 0
