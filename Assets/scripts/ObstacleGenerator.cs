@@ -27,7 +27,7 @@ public class ObstacleGenerator : MonoBehaviour
         if (_TerrainPrefab != null)
         {
             Transform parent = GameObject.Find("map").GetComponent<Transform>();
-            int random = UnityEngine.Random.Range(0, 4);
+            int random = UnityEngine.Random.Range(0, 9);
             GameObject prefab = _TerrainPrefab[random];
             GameObject newLand = Instantiate(prefab);
             newLand.transform.parent = parent;
