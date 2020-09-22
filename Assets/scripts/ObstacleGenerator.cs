@@ -10,10 +10,12 @@ public class ObstacleGenerator : MonoBehaviour
 
     public GameObject _prevLandPart = null;
     public Vector3 prevPos;
+    mainchar _pl;
 
     public void Init()
     {
         _prevLandPart = _TerrainPrefab[0];
+        _pl = mainchar.Instance;
     }
     // Update is called once per frame
     void Update()
@@ -28,15 +30,16 @@ public class ObstacleGenerator : MonoBehaviour
         if (_TerrainPrefab != null)
         {
             Transform parent = GameObject.Find("map").GetComponent<Transform>();
-            int random = UnityEngine.Random.Range(0, 8);
+            int arraySize = _TerrainPrefab.Length;
+            int random = UnityEngine.Random.Range(0, arraySize);
             GameObject prefab = _TerrainPrefab[random];
             GameObject newLand = Instantiate(prefab);
             newLand.transform.parent = parent;
             newLand.AddComponent<Ground>();                       
 
-            prevPos = _prevLandPart.transform.position;
+            prevPos = _prevLandPart.transform.localPosition;
             float offset = UnityEngine.Random.Range(2.0f, 4.0f);
-            newLand.transform.position = new Vector3(prevPos.x + Common.LAND_PART_WIDTH + offset, prevPos.y, prevPos.z);
+            newLand.transform.localPosition = new Vector3(prevPos.x + Common.LAND_PART_WIDTH + offset, prevPos.y, prevPos.z);
             _prevLandPart = newLand;
         }
 
