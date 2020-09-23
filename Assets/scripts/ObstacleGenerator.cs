@@ -10,12 +10,10 @@ public class ObstacleGenerator : MonoBehaviour
 
     public GameObject _prevLandPart = null;
     public Vector3 prevPos;
-    mainchar _pl;
 
     public void Init()
     {
         _prevLandPart = _TerrainPrefab[0];
-        _pl = mainchar.Instance;
     }
     // Update is called once per frame
     void Update()

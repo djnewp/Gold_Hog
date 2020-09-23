@@ -66,7 +66,7 @@ public class mainchar : character
         _StdCol = gameObject.GetComponent<CapsuleCollider2D>();
         _SldCol = gameObject.transform.Find("SlideCollider").GetComponent<CapsuleCollider2D>();
         _GameMana = GameManage.Instance;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     public void OnDmg(int dmg)

@@ -8,6 +8,6 @@ public class MenuScreen : scene_base
 {
     public void LoadGameScene()
     {
-        SceneManager.LoadScene("hog_main");
+        SceneManager.LoadScene(1);
     }
 }

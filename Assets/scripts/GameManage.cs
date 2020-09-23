@@ -80,11 +80,13 @@ public class GameManage : MonoBehaviour
 
     public void Respawn()
     {
-        Vector3 SP = new Vector3(_start.transform.position.x, _start.transform.position.y, _start.transform.position.z);
-        _mychar.transform.position = SP;
+        float offset = 1.5f;
+        Vector3 t = _start.transform.position;
+        Vector3 SP = new Vector3(t.x, t.y, t.z);
+        _mychar.transform.position = new Vector3 (SP.x+offset, SP.y,SP.z);
         _mychar.OnHeal(_mychar._maxhp);
         _uiManage.Show("HPGauge", true);
-        _move.transform.position = _move.StartPos;
+        _move.transform.position = t;
         _maprig.bodyType = RigidbodyType2D.Dynamic;
         IsGameOver = false;
         Score = 0;
@@ -100,7 +102,8 @@ public class GameManage : MonoBehaviour
         _uiManage.Show("ResultScreen", true);
         IsGameOver = true;
         _gameScore.enabled = false;
-       
+        _og._prevLandPart = null;
+        _og.prevPos = new Vector3(0, transform.position.y, transform.position.z);
         //게임오버 및 재시작 UI 표시하기
 
     }

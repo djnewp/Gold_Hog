@@ -74,7 +74,8 @@ public class UIManage : MonoBehaviour
 
     public void Restart()
     {
-        _gamem.Respawn();
+        SceneManager.LoadScene(1);
+        //_gamem.Respawn();
         
     }
     // Update is called once per frame
