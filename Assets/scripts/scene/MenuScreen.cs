@@ -10,4 +10,5 @@ public class MenuScreen : scene_base
     {
         SceneManager.LoadScene(1);
     }
+
 }
