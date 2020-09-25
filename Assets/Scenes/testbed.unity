@@ -4486,6 +4486,8 @@ MonoBehaviour:
   - {fileID: 1781624291250717131, guid: f2c4ef355192c5a4fa2767e3f1761438, type: 3}
   - {fileID: 1781624291250717131, guid: 22ca15e2007981340b51a21e863357d3, type: 3}
   - {fileID: 1781624291250717131, guid: 928c32b1e023b644f888d00029146022, type: 3}
+  - {fileID: 1781624291250717131, guid: f2c4ef355192c5a4fa2767e3f1761438, type: 3}
+  - {fileID: 1781624291250717131, guid: 7412b7219ba383744ad6ffe4d54711f9, type: 3}
   _prevLandPart: {fileID: 0}
   prevPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1904533682
