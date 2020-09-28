@@ -90,6 +90,7 @@
     <Compile Include="Assets\scripts\OneByOne.cs" />
     <Compile Include="Assets\scripts\Parrellex.cs" />
     <Compile Include="Assets\scripts\SP.cs" />
+    <Compile Include="Assets\scripts\ShakeTrigger.cs" />
     <Compile Include="Assets\scripts\SoundManager.cs" />
     <Compile Include="Assets\scripts\TwoByTwo.cs" />
     <Compile Include="Assets\scripts\UI\UITextTypeWriter.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\scripts\UI\ui_play.cs" />
     <Compile Include="Assets\scripts\UI\ui_plhpbar.cs" />
     <Compile Include="Assets\scripts\UI\ui_ranking.cs" />
+    <Compile Include="Assets\scripts\UI\ui_setting.cs" />
     <Compile Include="Assets\scripts\UI\ui_start.cs" />
     <Compile Include="Assets\scripts\UIManage.cs" />
     <Compile Include="Assets\scripts\actor\Ground.cs" />

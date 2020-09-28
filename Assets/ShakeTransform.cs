@@ -9,8 +9,8 @@ public class ShakeTransform : MonoBehaviour
     private Vector3 _randomPos;
 
     [Header("Settings")]
-    [Range(0f, 2f)]
-    public float _time = 0.2f;
+    [Range(0f, 100f)]
+    public float _time = 20f;
     [Range(0f, 2f)]
     public float _distance = 0.1f;
     [Range(0f, 0.1f)]
@@ -18,9 +18,7 @@ public class ShakeTransform : MonoBehaviour
 
     private void Awake()
     {
-        _startPos = transform.position;
-
-        //Begin();
+        _startPos = transform.localPosition;
     }
 
     private void OnValidate()
@@ -45,7 +43,7 @@ public class ShakeTransform : MonoBehaviour
 
             _randomPos = _startPos + (Random.insideUnitSphere * _distance);
 
-            transform.position = _randomPos;
+            transform.localPosition = _randomPos;
 
             if (_delayBetweenShakes > 0f)
             {
@@ -57,7 +55,7 @@ public class ShakeTransform : MonoBehaviour
             }
         }
 
-        transform.position = _startPos;
+        transform.localPosition = _startPos;
     }
 
 }
