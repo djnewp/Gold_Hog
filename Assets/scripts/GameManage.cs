@@ -21,6 +21,7 @@ public class GameManage : MonoBehaviour
     public Rigidbody2D _maprig;
     public naming _name;
     ObstacleGenerator _og;
+    public GameObject _btns;
 
     [HideInInspector]
     public static GameManage _instance;
@@ -92,6 +93,7 @@ public class GameManage : MonoBehaviour
         Score = 0;
         _gameScore.enabled = true;
         ObstacleInit();
+        _btns.SetActive(true);
         
     }
 
@@ -104,6 +106,7 @@ public class GameManage : MonoBehaviour
         _gameScore.enabled = false;
         _og._prevLandPart = null;
         _og.prevPos = new Vector3(0, transform.position.y, transform.position.z);
+        _btns.SetActive(false);
         //게임오버 및 재시작 UI 표시하기
 
     }

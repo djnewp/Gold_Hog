@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/menuscreen.unity
     guid: c5c346ee86b797e41b1f9aa2cb8a9d77
   - enabled: 1
-    path: Assets/Scenes/hog_main.unity
-    guid: 996057d09c11bf249850d41d25f6bf4c
+    path: Assets/Scenes/testbed.unity
+    guid: 1fe840250e4bf9c4390d8aa148291a41
   m_configObjects: {}

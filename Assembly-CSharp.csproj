@@ -96,6 +96,7 @@
     <Compile Include="Assets\scripts\UI\UITextTypeWriter.cs" />
     <Compile Include="Assets\scripts\UI\common.cs" />
     <Compile Include="Assets\scripts\UI\ui_base.cs" />
+    <Compile Include="Assets\scripts\UI\ui_button.cs" />
     <Compile Include="Assets\scripts\UI\ui_gamescene.cs" />
     <Compile Include="Assets\scripts\UI\ui_hpbar.cs" />
     <Compile Include="Assets\scripts\UI\ui_main.cs" />
@@ -115,10 +116,10 @@
     <Compile Include="Assets\scripts\actor\mainchar.cs" />
     <Compile Include="Assets\scripts\actor\obstacle.cs" />
     <Compile Include="Assets\scripts\actor\obstacleDrop.cs" />
-    <Compile Include="Assets\scripts\actor\rundebilrun.cs" />
     <Compile Include="Assets\scripts\anim_behav\Sliding.cs" />
     <Compile Include="Assets\scripts\anim_behav\jumpreturn.cs" />
     <Compile Include="Assets\scripts\mycamerafollow.cs" />
+    <Compile Include="Assets\scripts\network\WebModule.cs" />
     <Compile Include="Assets\scripts\scene\GameScreen.cs" />
     <Compile Include="Assets\scripts\scene\MenuScreen.cs" />
     <Compile Include="Assets\scripts\scene\introscreen.cs" />

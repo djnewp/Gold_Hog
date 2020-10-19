@@ -29,6 +29,7 @@ public class mainchar : character
     public int jump = 0;
 
 
+
     public AudioSource _jumpSnd;
 
     [HideInInspector]
@@ -105,10 +106,7 @@ public class mainchar : character
             }
             else if (Input.GetKeyUp(KeyCode.LeftControl))
             {
-                _SldCol.enabled = false;
-                _StdCol.enabled = true;
-                _anim.SetBool("onslide", false);
-                _anim.SetBool("IsStanding", true);
+                SlideEnd();
 
             }
             if (Input.GetKeyDown(KeyCode.Space))
@@ -116,8 +114,7 @@ public class mainchar : character
                 Jump();
 
             }
-        }
-
+        }   
     }
 
     public void Jump()
@@ -138,6 +135,7 @@ public class mainchar : character
         else return;
 
     }
+
 
 
     public void Slide()
@@ -170,4 +168,13 @@ public class mainchar : character
             Debug.Log("현재 체력" + _hp);
         }
     }    
+    public void SlideEnd()
+    {
+
+        _SldCol.enabled = false;
+        _StdCol.enabled = true;
+        _anim.SetBool("onslide", false);
+        _anim.SetBool("IsStanding", true);
+    }
+
 }
