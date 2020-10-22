@@ -54,11 +54,7 @@ public class mainchar : character
     void Start()
     {
 
-        /*if (_uiM == null) 
-        {
-            GameObject uiMger = GameObject.Find("UIMng");
-            _uiM = uiMger.GetComponent<UIMng>();
-        }*/
+        
         _maxhp = 100;
         _rigid = GetComponent<Rigidbody2D>();
         _hp = _maxhp;
@@ -67,7 +63,6 @@ public class mainchar : character
         _StdCol = gameObject.GetComponent<CapsuleCollider2D>();
         _SldCol = gameObject.transform.Find("SlideCollider").GetComponent<CapsuleCollider2D>();
         _GameMana = GameManage.Instance;
-        //DontDestroyOnLoad(gameObject);
     }
 
     public void OnDmg(int dmg)
@@ -90,13 +85,11 @@ public class mainchar : character
         _anim.SetInteger("hp", _hp);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_hp > 0)
 
         {
-            //Move();
 
             if (transform.position.y <= -6) OnDmg(_maxhp);
 
@@ -140,6 +133,8 @@ public class mainchar : character
 
     public void Slide()
     {
+        Debug.Log("[슬라이딩] Slide");
+
         _StdCol.enabled = false;
         _SldCol.enabled = true;
         _anim.SetBool("onslide", true);
@@ -170,7 +165,7 @@ public class mainchar : character
     }    
     public void SlideEnd()
     {
-
+        Debug.Log("[슬라이딩] SlideEnd");
         _SldCol.enabled = false;
         _StdCol.enabled = true;
         _anim.SetBool("onslide", false);

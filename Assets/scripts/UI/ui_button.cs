@@ -8,10 +8,7 @@ public class ui_button : MonoBehaviour
     public void CallJump()
     {
         mainchar.Instance.Jump();
-    }
-
-
-    
+    }    
 
     public void CallSlide()
     {

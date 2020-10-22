@@ -23,10 +23,11 @@ public class ObstacleGenerator : MonoBehaviour
 
     }
 
-    private void NewLand()
+    private GameObject NewLand()
     {
         if (_TerrainPrefab != null)
         {
+            Debug.Log("[지형생성] NewLand");
             Transform parent = GameObject.Find("map").GetComponent<Transform>();
             int arraySize = _TerrainPrefab.Length;
             int random = UnityEngine.Random.Range(0, arraySize);
@@ -38,20 +39,20 @@ public class ObstacleGenerator : MonoBehaviour
             prevPos = _prevLandPart.transform.localPosition;
             float offset = UnityEngine.Random.Range(2.0f, 4.0f);
             newLand.transform.localPosition = new Vector3(prevPos.x + Common.LAND_PART_WIDTH + offset, prevPos.y, prevPos.z);
-            _prevLandPart = newLand;
+            return newLand;
         }
 
         else
         {
             Debug.LogError("프리팹 미부착");
+            return null;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
- 
-        if( collision.gameObject.tag == "Player")
-           NewLand();
+
+        if (collision.gameObject.tag == "Player") _prevLandPart = NewLand();
        
     }
 

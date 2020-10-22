@@ -645,7 +645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -4
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &254599782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,8 +1000,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280461602}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6446, y: 1.6446, z: 1.6446}
+  m_LocalPosition: {x: 8.43, y: 1.61, z: 0}
+  m_LocalScale: {x: 4.3173923, y: 5.7205453, z: 4.3173923}
   m_Children:
   - {fileID: 1450589521}
   - {fileID: 1924894948}
@@ -1074,7 +1074,7 @@ Transform:
   m_GameObject: {fileID: 287202465}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.94, y: -0.75, z: 0}
-  m_LocalScale: {x: 0.042918872, y: 0.042918872, z: 0.042918872}
+  m_LocalScale: {x: 0.09038285, y: 0.09038285, z: 0.09038285}
   m_Children: []
   m_Father: {fileID: 1616001771}
   m_RootOrder: 4
@@ -1143,7 +1143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -6
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &306465814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,7 +1531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -4
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +1816,7 @@ Transform:
   m_GameObject: {fileID: 723179478}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.4400005, y: -0.75, z: 0}
-  m_LocalScale: {x: 0.042918872, y: 0.042918872, z: 0.042918872}
+  m_LocalScale: {x: 0.09038285, y: 0.09038285, z: 0.09038285}
   m_Children: []
   m_Father: {fileID: 1616001771}
   m_RootOrder: 2
@@ -1885,7 +1885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -6
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &728667426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -3
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &969663570
 GameObject:
   m_ObjectHideFlags: 0
@@ -2554,7 +2554,7 @@ Transform:
   m_GameObject: {fileID: 1028796293}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.25999975, y: -0.75, z: 0}
-  m_LocalScale: {x: 0.042918872, y: 0.042918872, z: 0.042918872}
+  m_LocalScale: {x: 0.09038285, y: 0.09038285, z: 0.09038285}
   m_Children: []
   m_Father: {fileID: 1616001771}
   m_RootOrder: 3
@@ -2623,7 +2623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -6
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &1086376644
 GameObject:
   m_ObjectHideFlags: 0
@@ -2720,7 +2720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -4
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &1121057419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3100,18 +3100,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1168863714}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 334117098}
-        m_MethodName: CallSlide
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1168863714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3449,7 +3438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -3
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &1217755976
 GameObject:
   m_ObjectHideFlags: 0
@@ -3761,7 +3750,7 @@ Transform:
   m_GameObject: {fileID: 1291225510}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.734, y: -0.75, z: 0}
-  m_LocalScale: {x: 0.042918872, y: 0.042918872, z: 0.042918872}
+  m_LocalScale: {x: 0.09038285, y: 0.09038285, z: 0.09038285}
   m_Children: []
   m_Father: {fileID: 1616001771}
   m_RootOrder: 0
@@ -3780,7 +3769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -6
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &1319941101
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,7 +3866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -4
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &1413852506
 GameObject:
   m_ObjectHideFlags: 0
@@ -3904,8 +3893,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413852506}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6446, y: 1.6446, z: 1.6446}
+  m_LocalPosition: {x: 9.02, y: 1.54, z: 0}
+  m_LocalScale: {x: 4.2191353, y: 5.4848757, z: 4.2191353}
   m_Children:
   - {fileID: 1319941103}
   - {fileID: 488244438}
@@ -4047,7 +4036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -3
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &1513663252
 GameObject:
   m_ObjectHideFlags: 0
@@ -4639,8 +4628,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616001770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6446, y: 1.6446, z: 1.6446}
+  m_LocalPosition: {x: 4.09, y: 0, z: 0}
+  m_LocalScale: {x: 1.6636555, y: 2.4458334, z: 1.6636555}
   m_Children:
   - {fileID: 1291225512}
   - {fileID: 1968528783}
@@ -5297,7 +5286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -4
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &1775155310
 GameObject:
   m_ObjectHideFlags: 0
@@ -5657,7 +5646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -3
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &1968528781
 GameObject:
   m_ObjectHideFlags: 0
@@ -5735,7 +5724,7 @@ Transform:
   m_GameObject: {fileID: 1968528781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.098, y: -0.75, z: 0}
-  m_LocalScale: {x: 0.042918872, y: 0.042918872, z: 0.042918872}
+  m_LocalScale: {x: 0.09038285, y: 0.09038285, z: 0.09038285}
   m_Children: []
   m_Father: {fileID: 1616001771}
   m_RootOrder: 1
@@ -5754,7 +5743,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -6
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &1986563742
 GameObject:
   m_ObjectHideFlags: 0
@@ -6049,7 +6038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -3
   DestPos: -5.89
-  StartPos: 5.89
+  StartPos: 10.27
 --- !u!1 &2058050643
 GameObject:
   m_ObjectHideFlags: 0
