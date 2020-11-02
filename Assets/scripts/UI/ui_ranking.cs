@@ -9,12 +9,24 @@ public class ui_ranking : ui_base
 {
     public Text[] _scoreTextList;
     public naming _name;
+    public GameObject _Mainscreen;
+
 
     public string[] GetScoreList()
     {
         List<string> scoreList = new List<string>();
 
-        using (StreamReader sr = new StreamReader("HighScore.txt"))
+        string path = "";
+#if UNITY_ANDROID
+        path = Application.persistentDataPath + "/HighScore.txt";
+#else
+            path = "HighScore.txt";
+#endif
+
+
+
+
+        using (StreamReader sr = new StreamReader(path))
         {
             while (sr.Peek() >= 0)
             {
@@ -76,6 +88,4 @@ public class ui_ranking : ui_base
         }
     }
 
- 
- 
 }

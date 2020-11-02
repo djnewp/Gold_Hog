@@ -43,7 +43,22 @@ public class naming : MonoBehaviour
     {
         if (_userID != null)
         {
-            using (StreamWriter sw = new StreamWriter("HighScore.txt", true))
+
+            string path = "";
+
+#if UNITY_ANDROID
+            path = Application.persistentDataPath + "/HighScore.txt";
+#else
+            path = "HighScore.txt";
+#endif
+
+
+            
+
+
+
+
+            using (StreamWriter sw = new StreamWriter(path, true))
             {
                 sw.WriteLine(_userID + "," + _scoring.newScore.ToString("N1"));
             }
@@ -54,4 +69,6 @@ public class naming : MonoBehaviour
 
         else { Debug.LogError("유저 아이디 가져올 수 없음"); }
     }
+
+
 }
